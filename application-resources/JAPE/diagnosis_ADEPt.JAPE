@@ -1,0 +1,34 @@
+/*--Developed By Ehtesham Iqbal 				 ----*/ 
+/*--Email: Ehtesham.iqbal@kcl.ac.uk  ----------------*/ 
+
+
+Phase: DIAGNOSTNegTest2
+Input: Lookup
+Options: control = appelt
+
+Rule: diagnostbefore
+(
+  {Lookup.majorType == "diagnost"}
+  ({Lookup.majorType == "ADR"}):ADR1
+
+):diagnostbefore
+-->
+:diagnostbefore
+{
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","Diagnosis");
+			} 
+			
+		}
+	}
+}

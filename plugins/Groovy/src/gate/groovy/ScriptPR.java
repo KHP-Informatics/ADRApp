@@ -242,34 +242,46 @@ public class ScriptPR extends AbstractLanguageAnalyser implements
       fireStatusChanged("Groovy script PR running");
     }      
     fireProgressChanged(0);
-
-    // Create the variable bindings
+    
     Binding binding = groovyScript.getBinding();
-    binding.setVariable("doc", document);
-    binding.setVariable("corpus", corpus);
-    if(document != null) {
-      binding.setVariable("content", document.getContent().toString());
-    } else {
-      binding.setVariable("content", null);
-    }
-    binding.setVariable("inputAS", inputAS);
-    binding.setVariable("outputAS", outputAS);
-
-    // these should be deprecated, really, they're no longer necessary with the
-    // imports
-    binding.setVariable("gate", Gate.class);
-    binding.setVariable("factory", gate.Factory.class);
-
-    // The FeatureMap is passed in its entirety, making the keys available in
-    // a bean-like way. So in a map with k=v, the script can say
-    // assert scriptParams.k == v
-    binding.setVariable("scriptParams", scriptParams);
-
-    // Run the script engine
+    
     try {
+      // Create the variable bindings      
+      binding.setVariable("doc", document);
+      binding.setVariable("corpus", corpus);
+      if(document != null) {
+        binding.setVariable("content", document.getContent().toString());
+      } else {
+        binding.setVariable("content", null);
+      }
+      binding.setVariable("inputAS", inputAS);
+      binding.setVariable("outputAS", outputAS);
+  
+      // these should be deprecated, really, they're no longer necessary with the
+      // imports
+      binding.setVariable("gate", Gate.class);
+      binding.setVariable("factory", gate.Factory.class);
+  
+      // The FeatureMap is passed in its entirety, making the keys available in
+      // a bean-like way. So in a map with k=v, the script can say
+      // assert scriptParams.k == v
+      binding.setVariable("scriptParams", scriptParams);
+  
+      // Run the script engine    
       groovyScript.run();
     } catch(RuntimeException re) {
       throw new ExecutionException("Problem running Groovy script", re);
+    }
+    finally {
+      binding.setVariable("doc", null);
+      binding.setVariable("corpus", null);
+      binding.setVariable("content", null);
+      binding.setVariable("inputAS", null);
+      binding.setVariable("outputAS", null);
+      
+      // TODO not sure if we should nullify scriptParams as well, but I'm
+      // thinking it's fairly safe not to as they shouldn't be document/corpus
+      // based
     }
 
     // We've done

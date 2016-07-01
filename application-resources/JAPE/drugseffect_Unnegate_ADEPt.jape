@@ -1,0 +1,61 @@
+/*--Developed By Ehtesham Iqbal / Robbie Mallah ----*/ 
+/*--Email: Ehtesham.iqbal@kcl.ac.uk ----------------*/ 
+
+Phase: DrugseffectNeg
+Input: Token Lookup stopmatch egmatch Split
+Options: control = all
+
+
+Rule: DueToDrug1
+(
+  ({Lookup.majorType == "ADR"}):ADR1
+  ({Token})[0,2]
+  {Lookup.majorType == "drug"}
+  {Split}
+
+):duetodrug
+-->
+:duetodrug
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			    
+				annot.getFeatures().put("Negation","Affirmed");
+				annot.getFeatures().put("JAPERule","DueToDrug");
+			} 
+			
+		}
+	}
+
+
+/**********************************************************************/
+
+Rule: Sideeffects1
+(
+  {Lookup.majorType == "negseffects"}
+  ({Token})*
+  {Lookup.majorType == "drug"}
+  ({Token})*
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+):statusyes
+-->
+:statusyes
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			   
+				annot.getFeatures().put("Negation","Affirmed");
+				annot.getFeatures().put("JAPERule","StausYes1");
+			} 
+			
+		}
+	}

@@ -1,0 +1,146 @@
+/*--Developed By Ehtesham Iqbal / Robbie Mallah     ----*/ 
+/*--Email: Ehtesham.iqbal@kcl.ac.uk --------------------*/ 
+
+Phase: ADRInUnnegate
+Input: Lookup Token Split
+Options: control = all
+
+Rule: ADRInbefore
+
+(
+  {Lookup.majorType == "ADRIn"}
+  ({Token})? 
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+
+):ADRInbefore
+-->
+:ADRInbefore
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			   
+				annot.getFeatures().put("Negation","Affirmed");
+				annot.getFeatures().put("JAPERule","ADRInGaz_ADR");
+			} 
+			
+		}
+	}
+
+/*********************************************/
+
+
+Rule: DrugAdministration
+(
+  {Lookup.majorType == "admin"}
+  ({Token})[0,10]
+  ({Lookup.majorType == "ADRin"})
+  ({Token})[0,10]
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+
+):drugadminister
+-->
+:drugadminister
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+				annot.getFeatures().put("Negation","Affirmed");
+				annot.getFeatures().put("JAPERule","drugadmin");
+			} 
+			
+		}
+	}
+
+
+/*********************************************/
+
+Rule: SomeADR
+(
+  {Token.string == "some"}
+  ({Token})[0,3] 
+  ({Lookup.majorType == "ADR"}):ADR1
+
+):someadr
+-->
+:someadr
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+				annot.getFeatures().put("Negation","Affirmed");
+				annot.getFeatures().put("JAPERule","someadr");
+			} 
+			
+		}
+	}
+
+/*********************************************/
+
+Rule: Statusyes
+(
+  {Lookup.majorType == "statusyes"}
+  ({Token})[0,3] 
+  ({Lookup.majorType == "ADR"}):ADR1
+
+):statusyes
+-->
+:statusyes
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			   
+				annot.getFeatures().put("Negation","Affirmed");
+				annot.getFeatures().put("JAPERule","treatmentadr");
+			} 
+			
+		}
+	}
+
+/*********************************************/
+
+Rule: your
+(
+  {Lookup.majorType == "your"}
+  ({Token.category=="JJ"})?
+  ({Lookup.majorType == "ADR"}):ADR1
+
+):your
+-->
+:your
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			   	
+				annot.getFeatures().put("Negation","Affirmed");
+				annot.getFeatures().put("JAPERule","your");
+			} 
+			
+		}
+	}
+
+/******************************************/
+	

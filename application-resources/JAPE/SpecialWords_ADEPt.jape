@@ -1,0 +1,35 @@
+/*--Developed By Ehtesham Iqbal / Robbie Mallah ----*/ 
+/*--Email: Ehtesham.iqbal@kcl.ac.uk --------------------*/ 
+
+
+
+Phase: TitleNeg
+Input: Lookup Token Split SpaceToken
+Options: control = all
+
+Rule: TitlewithADE
+(
+  {Lookup.majorType == "title"}
+  ({Token.kind == "punctuation"}|{SpaceToken})[0,2]
+  ({Lookup.majorType == "ADR"}):ADR1
+
+):TitlewithADE
+-->
+:TitlewithADE
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			    
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","Title");
+			} 
+			
+		}
+	}
+

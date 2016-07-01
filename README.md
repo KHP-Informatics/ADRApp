@@ -123,11 +123,8 @@ If the experiencer is ‘patient’, temporality is ‘current’ and negation i
 ## ADR Pipeline Workflow
 
 ### ADR Pipeline Workflow with output annotation and features
-![workflow_1](./images/NewApp1.png)
+![workflow_1](./images/NewApp.png)
 
-
-### ADR Pipeline Workflow with output annotation and features (Extendedå)
-![workflow_2](./images/NewApp.png)
 
 
 ## Acknowledgements

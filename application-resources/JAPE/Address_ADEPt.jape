@@ -1,0 +1,56 @@
+/*--Developed By Ehtesham Iqbal ----*/ 
+/*--Email: Ehtesham.iqbal@kcl.ac.uk ----------------*/ 
+
+Phase: AddressPostCode
+Input: Lookup SpaceToken Token Split Address Identifier
+Options: control = appelt
+
+Rule: PostcodeAddress
+(   
+	(({Address})+):ADR1
+):PostcodeAddress
+-->
+:PostcodeAddress
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			
+			for(Annotation annot : patSet) 
+			{   
+			    
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","Address");
+			} 
+			
+		}
+	}	
+	
+	/******************************/
+	
+Rule: IdentifierText
+(   
+	(({Identifier})+):ADR1
+):IdentifierText
+-->
+:IdentifierText
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			
+			for(Annotation annot : patSet) 
+			{   
+			    
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","IdentifierText");
+			} 
+			
+		}
+	}	

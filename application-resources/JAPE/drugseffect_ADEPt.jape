@@ -1,0 +1,214 @@
+/*--Developed By Ehtesham Iqbal 				 ----*/ 
+/*--Email: Ehtesham.iqbal@kcl.ac.uk  ----------------*/ 
+
+
+Phase: DrugseffectNeg
+Input: Token Lookup stopmatch egmatch Split
+Options: control = all
+
+
+
+Rule: drugsbefore
+(
+  {Lookup.majorType == "drug"}
+  ({Token})*
+  {Lookup.majorType == "druglink"}
+  ({Token})*
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+
+
+):drugsbefore
+-->
+:drugsbefore
+	{
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			   
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","Drug_Link_ADR");
+			} 
+			
+		}
+	}
+/*********************************************/
+
+Rule: drugsafter
+(
+  ({Lookup.majorType == "ADR"}):ADR1
+  ({Token})*
+  {Lookup.majorType == "druglink"}
+  ({Token})*
+  {Lookup.majorType == "drug"}
+  {Split}
+
+
+):drugsafter
+-->
+:drugsafter
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","ADR_Link_Drug");
+			} 
+			
+		}
+	}
+
+/*********************************************/
+
+Rule: stopbefore
+(
+  ({stopmatch})?
+  ({Lookup.majorType == "admin"})?
+  {Lookup.majorType == "drug"}
+  ({Lookup})*
+  {Lookup.majorType == "druglink"}
+  ({Lookup})*
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+
+
+):stopbefore
+-->
+:stopbefore
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			    
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","Admin_drug_link_ADR");
+			} 
+			
+		}
+	}
+
+/*********************************************/
+
+Rule: drugegbefore
+(
+  {Lookup.majorType == "drug"}
+  ({Token})*
+  {egmatch}
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+
+
+):drugegbefore
+-->
+:drugegbefore
+	{
+	
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			    
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","drug_eg_ADR");
+			} 
+			
+		}
+	}
+
+/**********************************************************************/
+
+Rule: Sideeffects1
+(
+  {Lookup.majorType == "negseffects"}
+  ({Token})*
+  {Lookup.majorType == "drug"}
+  ({Token})*
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+):statusyes
+-->
+:statusyes
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			   
+				annot.getFeatures().put("Negation","Affirmed");
+				annot.getFeatures().put("JAPERule","StausYes1");
+			} 
+			
+		}
+	}
+	
+/**********************************************************************/
+
+Rule: Sideeffects2
+(
+  {Lookup.majorType == "drug"}
+  ({Token})*
+  {Lookup.majorType == "negseffects"}
+  ({Token})*
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+):statusyes
+-->
+:statusyes
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			  
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","treatmentadr");
+			} 
+			
+		}
+	}
+
+
+/**********************************************************************/
+
+Rule: Sideeffects3
+(
+  {Lookup.majorType == "statusno"}
+  ({Token})[0,10] 
+  {Lookup.majorType == "negseffects"}
+  ({Token})[0,10] 
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+):statusyes
+-->
+:statusyes
+	{
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			  
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","treatmentadr");
+			} 
+			
+		}
+	}
+

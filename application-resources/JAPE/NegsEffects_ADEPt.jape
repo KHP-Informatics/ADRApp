@@ -1,0 +1,292 @@
+/*--Developed By Ehtesham Iqbal / Robbie Mallah ----*/ 
+/*--Email: Ehtesham.iqbal@kcl.ac.uk --------------------*/ 
+
+
+
+Phase: NegSeffects
+Input: Lookup Token Split SpaceToken
+Options: control = all
+
+
+/*********************************************/
+Rule: negseffects
+(
+  {Lookup.majorType == "negseffects"}
+  ({Token})*
+  ({Token.string == "include"}|{Token.string == "included"}|{Token.string == "including"}|{Token.string == "Include"}|{Token.string == "Included"}|{Token.string == "Including"})
+  ({Token})*
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+):negseffects
+-->
+:negseffects
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			   
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","NegativeEffectExplained1");
+			} 
+			
+		}
+	}
+
+/*********************************************/
+
+Rule: negseffectsII
+(
+  ({Token.string == "explain"}|{Token.string == "explained"}|{Token.string == "Explain"}|{Token.string == "Explained"})
+  ({Token}|{Lookup})*
+  ({Lookup.majorType == "negseffects"})
+  ({Token}|{Lookup})*
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+
+
+):negseffectsII
+-->
+:negseffectsII
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			  
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","NegativeEffectExplained2");
+			} 
+			
+		}
+	}
+
+/*********************************************/
+
+Rule: negseffectsIII
+(
+   
+  ({Token.string == "potential"}|{Token.string == "Potential"})
+  ({Token})*
+  ({Lookup.majorType == "negseffects"})
+  ({Token})*
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+):negseffectsIII
+-->
+:negseffectsIII
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			   
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","PotentialSideEffects1");
+			} 
+			
+		}
+	}
+
+/*********************************************/
+
+Rule: negseffectsIIII
+(
+  ({Token.sting == "disadvantage"}|{Token.sting == "disadvantages"}|{Token.sting == "Disadvantage"}|{Token.sting == "Disadvantages"})
+  ({Token})*
+  ({Lookup.majorType == "negseffects"})
+  ({Token})*
+  ({Lookup.majorType == "ADR"}):ADR1
+   {Split}
+):negseffectsIIII
+-->
+:negseffectsIIII
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			   
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","DisadvantagesofDrug");
+			} 
+			
+		}
+	}
+
+/*********************************************/
+
+Rule: negseffectsV
+(
+  {Lookup.majorType == "negseffects"}
+  ({Token})*
+  ({Token.string == "such"}| {Token.string == "Such"})
+  ({Token})*
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+):negseffectsV
+-->
+:negseffectsV
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			  
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","NegativeEffectExplained3");
+			} 
+			
+		}
+	}
+/*********************************************/
+
+Rule: negseffectsVI
+(
+  ({Token.string == "inform"}|{Token.string == "Inform"}|{Token.string == "informed"}|{Token.string == "Informed"})
+  ({Token})*
+  ({Lookup.majorType == "negseffects"})
+  ({Token})*
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+):negseffectsVI
+-->
+:negseffectsVI
+		{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			    
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","InformingPatient");
+			} 
+			
+		}
+	}
+/*********************************************/
+
+Rule: negseffectsVII
+(
+  ({Token.string == "common"}|{Token.string == "Common"})
+  ({Token})*
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+):negseffectsVII
+-->
+:negseffectsVII
+		{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			   
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","CommonADEDiscussion");
+			} 
+			
+		}
+	}
+/*********************************************/
+
+Rule: negseffectsIX
+(
+  {Lookup.majorType == "negseffects"}
+  ({Token}|{Lookup}|{SpaceToken})[0,3]
+  ({Token.string == "explain"}|{Token.string == "explained"}|{Token.string == "Explain"}|{Token.string == "Explained"})
+  ({Token}|{Lookup}|{SpaceToken})[0,3]
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+):negseffectsIX
+-->
+:negseffectsIX
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			   
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","NegativeEffectExplained4");
+			} 
+		}
+	}
+/*********************************************/
+Rule: adestop
+(
+  ({Lookup.majorType == "ADR"}):ADR1
+  ({Token}|{Lookup}|{SpaceToken})[0,3]
+  ({Token.string == "Stopped"}|{Token.string == "Stop"}|{Token.string == "stopped"}|{Token.string == "stop"})
+ 
+):adestop
+-->
+:adestop
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			   
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","ADEStop1");
+			} 
+		}
+	}
+
+
+/***************************************************/
+ Rule: adestop2
+(
+  ({Token.string == "Stopped"}|{Token.string == "Stop"}|{Token.string == "stopped"}|{Token.string == "stop"})
+  ({Token}|{Lookup}|{SpaceToken})[0,3]
+  ({Lookup.majorType == "ADR"}):ADR1
+  
+ 
+):adestop2
+-->
+:adestop2
+{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			   
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","ADEStop2");
+			} 
+		}
+	}
+
+	
+	
+	

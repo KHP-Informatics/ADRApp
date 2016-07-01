@@ -1,3 +1,25 @@
+
+
+Phase:rename
+Input: Manual
+Options: control = appelt
+Rule: Positive
+(
+{Manual.Manual == "Yes"}
+): pos
+-->
+:pos.ADR ={ADE_Status= "Yes" }
+
+Rule: Negative
+(
+{Manual.Manual == "No"}
+): neg
+-->
+:neg.ADR ={ADE_Status= "No" }
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
 /*
 Phase:rename
 Input: ManualAnnotation
@@ -36,7 +58,7 @@ Rule: Negative
 :neg.ADR ={ADE_Status= "No" }
 */
 ////////////////////////////////////////////////////////////////////////////////////////////
-
+/*
 Phase:rename
 Input: ManualAnnotation
 Options: control = appelt
@@ -53,7 +75,7 @@ Rule: Negative
 ): neg
 -->
 :neg.ADR ={ADR= "No" }
-
+*/
 //////////////////////////////////////////////////////////////////////////////////////////
 /*
 

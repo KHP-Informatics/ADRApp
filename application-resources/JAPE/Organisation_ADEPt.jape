@@ -1,0 +1,57 @@
+/*--Developed By Ehtesham Iqbal / Robbie Mallah     ----*/ 
+/*--Email: Ehtesham.iqbal@kcl.ac.uk --------------------*/ 
+
+Phase: ORGNegTest1
+Input: Lookup Token Split
+Options: control = all
+
+Rule: negbefore
+(
+  {Lookup.majorType == "organisation"}
+  ({Token})[0,2]
+  ({Lookup.majorType == "ADR"}):ADR1
+  
+):negbefore
+-->
+:negbefore
+{
+	if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			   
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","organisation");
+			} 
+			
+		}
+  
+}
+
+Rule: negafter
+(
+  ({Lookup.majorType=="ADR"}):ADR1
+  ({Token})[0,2]
+  {Lookup.majorType == "organisation"}
+):negafter
+-->
+:negafter
+{
+	if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			   
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","organisation");
+			} 
+			
+		}
+  
+}
+
+
+
+

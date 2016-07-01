@@ -1,11 +1,20 @@
 Multiphase: Negation
 Phases:
+/*** Stage 1***/
+egmatch_ADEPt
+stopmatch_ADEPt
+MultipleADR_ADEPt
+Punctuation_ADEPt
+SpecialWords_ADEPt
 
-organisation
-monitor_Shami
-MultipleADRIdentification
-NegsEffects_Shami
-drugseffect_Shami
-IfNegation_Shami
-wordaroundADR
+/***** Stage 2 ****/
 
+organisation_ADEPt
+monitor_ADEPt
+MultipleADRIdentification_ADEPt
+NegsEffects_ADEPt
+drugseffect_ADEPt
+IfNegation_ADEPt
+wordaroundADR_ADEPt
+diagnosis_ADEPt
+Address_ADEPt

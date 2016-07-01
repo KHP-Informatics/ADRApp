@@ -1,4 +1,0 @@
-<!-- creole.xml for Measurement Tagger -->
-<CREOLE-DIRECTORY>
-  <JAR SCAN="true">MeasurementTagger.jar</JAR>
-</CREOLE-DIRECTORY>

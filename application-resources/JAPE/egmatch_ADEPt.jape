@@ -1,0 +1,16 @@
+/*--Developed By Ehtesham Iqbal / Robbie Mallah     ----*/ 
+/*--Email: Ehtesham.iqbal@kcl.ac.uk --------------------*/ 
+
+Phase: EGMatch
+Input: Token SpaceToken
+Options: control = appelt
+
+Rule: egmatch
+(
+ {Token.string == "e"}
+ ({Token.string == "."})?
+ {Token.string == "g"}
+):egmatch
+-->
+ :egmatch.egmatch={}
+  
