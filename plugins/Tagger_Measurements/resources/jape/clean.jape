@@ -1,0 +1,48 @@
+/*
+ * Copyright (c) 2009-2011, The University of Sheffield.
+ * 
+ * This file is part of GATE (see http://gate.ac.uk/), and is free software,
+ * Licensed under the GNU Library General Public License, Version 3, June 2007
+ * (in the distribution as file licence.html, and also available at
+ * http://gate.ac.uk/gate/licence.html).
+ */
+ 
+Phase: Clean
+
+Input: CannotBeAMeasurement Measurement Token SpaceToken PossibleMeasurement
+Options: control = all
+
+Rule:Ignore
+Priority: 1000
+(
+	{CannotBeAMeasurement}
+):ignore
+-->
+{
+	AnnotationSet ignore = (AnnotationSet)bindings.get("ignore");
+	
+	outputAS.removeAll(ignore);
+}
+
+Rule:InWord
+Priority: 1000
+(
+	{Token.kind == "word"}
+	({Measurement}):ignore
+)
+-->
+{
+	Annotation ignore = ((AnnotationSet)bindings.get("ignore")).iterator().next();
+	inputAS.remove(ignore);
+}
+
+Rule:TempAnnotations
+(
+	{PossibleMeasurement}
+):possible
+-->
+{
+	AnnotationSet possible = (AnnotationSet)bindings.get("possible");
+	
+	outputAS.removeAll(possible);
+}

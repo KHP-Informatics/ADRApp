@@ -1,0 +1,38 @@
+Phase: ADRMonitor
+Input: Lookup Token Split
+Options: control = all
+
+
+Rule: monbefore
+(
+  {Lookup.majorType == "monitor"}
+  ({Lookup}|{Token})[0,5]
+  ({Lookup.majorType == "ADR"}):ADR
+
+
+):monbefore
+-->
+:monbefore{
+  AnnotationSet set= bindings.get("ADR");
+  for (Annotation ann : set){
+   ann.getFeatures().put("ignoreMe",Boolean.TRUE);
+   ann.getFeatures().put("rule", "monbefore");
+  }
+
+}
+
+Rule: monafter
+(
+  ({Lookup.majorType=="ADR"}):ADR
+  ({Lookup}|{Token})[0,10]
+  {Lookup.majorType=="monitor"}
+):monafter
+-->
+:monafter{
+  AnnotationSet set= bindings.get("ADR");
+  for (Annotation ann : set){
+   ann.getFeatures().put("ignoreMe",Boolean.TRUE);
+   ann.getFeatures().put("rule", "monafter");
+  }
+}
+

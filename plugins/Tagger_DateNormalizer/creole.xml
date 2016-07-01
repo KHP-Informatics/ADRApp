@@ -1,0 +1,6 @@
+<CREOLE-DIRECTORY>
+  <CREOLE>
+    <JAR>lib/DateParser.jar</JAR>
+    <JAR scan="true">DateNormalizer.jar</JAR>
+  </CREOLE>
+</CREOLE-DIRECTORY>

@@ -1,0 +1,151 @@
+/*
+ * Copyright (c) 2009-2011, The University of Sheffield.
+ * 
+ * This file is part of GATE (see http://gate.ac.uk/), and is free software,
+ * Licensed under the GNU Library General Public License, Version 3, June 2007
+ * (in the distribution as file licence.html, and also available at
+ * http://gate.ac.uk/gate/licence.html).
+ */
+ 
+Phase: Concentrations
+
+Input: Number Token CannotBeAMeasurement
+Options: control = appelt
+
+Rule:Ignore
+Priority: 1000
+(
+	{CannotBeAMeasurement}
+)
+-->
+{}
+
+Rule: pH
+(
+	{Token.string == "pH"}
+	({Token.string == "of"})?
+	({Number}):number
+):measurement
+-->
+{
+  Annotation number = ((AnnotationSet)bindings.get("number")).iterator().next();
+  AnnotationSet measurement = (AnnotationSet)bindings.get("measurement");
+    
+  try {
+	
+	boolean consumeNumberAnnotations = (Boolean)getActionContext().getPRFeatures().get("consumeNumberAnnotations");
+	
+	FeatureMap features = Factory.newFeatureMap();
+	features.put("rule","pH");
+		
+	features.put("value", number.getFeatures().get("value"));
+	features.put("unit","pH");
+		
+	features.put("normalizedValue", number.getFeatures().get("value"));	
+	features.put("normalizedUnit","pH");
+	    
+    outputAS.add(measurement.firstNode().getOffset(),measurement.lastNode().getOffset(),"Measurement", features);
+    
+    if (consumeNumberAnnotations) inputAS.remove(number);
+  }
+  catch (Exception e) {
+    throw new NonFatalJapeException(e);
+  }
+}
+
+Rule: MolarPercentage
+(
+	({Number}):number
+	({Token.string == "mol"}
+	({Token.string == "."})?
+	{Token.string == "%"}):unit
+)
+-->
+{
+  Annotation number = ((AnnotationSet)bindings.get("number")).iterator().next();
+  AnnotationSet unit = (AnnotationSet)bindings.get("unit");
+  
+  try {
+    boolean consumeNumberAnnotations = (Boolean)getActionContext().getPRFeatures().get("consumeNumberAnnotations");
+   
+	FeatureMap features = Factory.newFeatureMap();
+	features.put("rule","MolarPercentage");
+		
+	features.put("value", number.getFeatures().get("value"));
+	features.put("unit",doc.getContent().getContent(unit.firstNode().getOffset(), unit.lastNode().getOffset()).toString());
+	
+	features.put("normalizedValue", number.getFeatures().get("value"));	
+	features.put("normalizedUnit","mol %");
+    
+    outputAS.add(number.getStartNode().getOffset(),unit.lastNode().getOffset(),"Measurement", features);
+    
+    if (consumeNumberAnnotations) inputAS.remove(number);
+  }
+  catch (Exception e) {
+    throw new NonFatalJapeException(e);
+  }
+}
+
+Rule: MassPercentage
+(
+	({Number}):number
+	({Token.string == "wt"}
+	({Token.string == "."})?
+	{Token.string == "%"}):unit
+)
+-->
+{
+  Annotation number = ((AnnotationSet)bindings.get("number")).iterator().next();
+  AnnotationSet unit = (AnnotationSet)bindings.get("unit");
+  
+  try {
+	boolean consumeNumberAnnotations = (Boolean)getActionContext().getPRFeatures().get("consumeNumberAnnotations");
+	
+	FeatureMap features = Factory.newFeatureMap();
+	features.put("rule","MassPercentage");
+		
+	features.put("value", number.getFeatures().get("value"));
+	features.put("unit",doc.getContent().getContent(unit.firstNode().getOffset(), unit.lastNode().getOffset()).toString());
+	
+	features.put("normalizedValue", number.getFeatures().get("value"));	
+	features.put("normalizedUnit","wt%");
+    
+    outputAS.add(number.getStartNode().getOffset(),unit.lastNode().getOffset(),"Measurement", features);
+    
+    if (consumeNumberAnnotations) inputAS.remove(number);
+  }
+  catch (Exception e) {
+    throw new NonFatalJapeException(e);
+  }
+}
+
+Rule: AtomicPercentage
+(
+	({Number}):number
+	({Token.string == "at"}
+	({Token.string == "."})?
+	{Token.string == "%"}):unit
+)
+-->
+{
+  Annotation number = ((AnnotationSet)bindings.get("number")).iterator().next();
+  AnnotationSet unit = (AnnotationSet)bindings.get("unit");
+  
+  try {
+	FeatureMap features = Factory.newFeatureMap();
+	features.put("rule","AtomicPercentage");
+		
+	features.put("value", number.getFeatures().get("value"));
+	features.put("unit",doc.getContent().getContent(unit.firstNode().getOffset(), unit.lastNode().getOffset()).toString());
+	
+	features.put("normalizedValue", number.getFeatures().get("value"));	
+	features.put("normalizedUnit","at%");
+    
+    outputAS.add(number.getStartNode().getOffset(),unit.lastNode().getOffset(),"Measurement", features);
+    
+    inputAS.remove(number);
+  }
+  catch (Exception e) {
+    throw new NonFatalJapeException(e);
+  }
+}

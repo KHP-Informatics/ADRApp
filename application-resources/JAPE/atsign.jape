@@ -1,0 +1,36 @@
+Phase: AtSign
+Input: Lookup Token Split
+Options: control = appelt
+
+Rule: atsignbefore
+(
+  ({Token.string == "@"})
+  ({Lookup.majorType == "ADR"}):ADR
+
+):atsignbefore
+-->
+:atsignbefore{
+  AnnotationSet set= bindings.get("ADR");
+  for (Annotation ann : set){
+   ann.getFeatures().put("ignoreMe",Boolean.TRUE);
+   ann.getFeatures().put("rule", "atsignbefore");
+  }
+
+}
+
+Rule: atsignafter
+(
+  ({Lookup.majorType == "ADR"}):ADR
+  ({Token.string == "@"})
+
+):atsignafter
+-->
+:atsignafter{
+  AnnotationSet set= bindings.get("ADR");
+  for (Annotation ann : set){
+   ann.getFeatures().put("ignoreMe",Boolean.TRUE);
+   ann.getFeatures().put("rule", "atsignafter");
+  }
+
+}
+

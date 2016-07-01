@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<GateDocument version="3">
+<!-- The document's features-->
+
+<GateDocumentFeatures>
+<Feature>
+  <Name className="java.lang.String">MatchesAnnots</Name>
+  <Value className="gate.corpora.ObjectWrapper"><![CDATA[<?xml version='1.0' encoding='UTF-8'?><gate.corpora.ObjectWrapper><value class="map"><entry><null/><list/></entry></value></gate.corpora.ObjectWrapper>]]></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">deleteNonNNPLookups</Name>
+  <Value className="java.lang.String">true</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">gate.SourceURL</Name>
+  <Value className="java.lang.String">file:/home/niraj/trendminer-sources/Data20092010/AFP_ENG_20070401.0302.LDC2009T13.sgm</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">lang</Name>
+  <Value className="java.lang.String">en</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">MimeType</Name>
+  <Value className="java.lang.String">text/sgml</Value>
+</Feature>
+</GateDocumentFeatures>
+<!-- The document content area with serialized nodes -->
+
+<TextWithNodes>
+ AFP_ENG_20070401.0302.LDC2009T13 
+ NEWS STORY 
+ 2007-04-01 
+
+
+Iraqi returns to Britain after Guantanamo 'nightmare'
+
+
+
+An Iraqi held at the US base in Guantanamo Bay for nearly five
+years said Sunday his "nightmare is finally at an end" in a
+statement issued after he returned to his family living in
+Britain.
+
+
+<Node id="314"/>Bisher al-Rawi<Node id="328"/> also spoke of the "hopelessness" and "extreme
+isolation" suffered by detainees at the US military base in Cuba
+and asked to be granted time with relatives to come to terms with
+his "horrific experience".
+
+
+Al-Rawi was arrested in November 2002 while on a business trip to
+Gambia, where his supporters say he was helping his older brother
+Wahab set up a peanut oil processing business.
+
+
+He returned to the family home in New Malden, southwest London,
+this weekend.
+
+
+"The hopelessness you feel in Guantanamo can hardly be
+described," he said in a statement released through his lawyers.
+
+
+"You are asked the same questions hundreds of times. Allegations
+are made against you that are laughably untrue, but you have no
+chance to prove them wrong. There is no trial, no fair legal
+process.
+
+
+"I was alleged to have participated in terrorist training in
+Bosnia and Afghanistan. I've never been to Bosnia and the only
+time I visited Afghanistan was thanks to the hospitality of the
+CIA in an underground prison, the Dark Prison outside Kabul."
+
+
+News of Al-Rawi's release was announced by Foreign Secretary
+Margaret Beckett in a written statement to parliament last week.
+
+
+Although he is not a British citizen, he was allowed to live in
+Britain after his immediate family fled Iraq more than 20 years
+ago when his father was arrested and tortured under former
+dictator Saddam Hussein's regime.
+
+
+Beckett added that his return would follow "extensive discussions
+to address the security implications of Mr Al-Rawi's return."
+
+
+Asked what this would mean for Al-Rawi now that he was back in
+Britain, the Foreign Office would not comment except to say that
+Britain would "continue to take the necessary measures to
+maintain national and international security."
+
+
+Human rights group Amnesty International called "urgently" for an
+independent inquiry into "any UK complicity with Guantanamo
+detentions", including in Al- Rawi's case.
+
+
+It added that Britain had played a "shadowy role" in his arrest
+and rendition.
+
+
+"In the past, the government has shamefully tried to wash its
+hands of UK residents at Guantanamo -- with Bisher's belated
+release, this must now end," the organisation said in a
+statement.
+
+
+Al-Rawi said there were still nine other British residents in the
+Guantanamo camp, some of whom were on hunger strike to protest at
+their extended periods in solitary confinement.
+
+
+He called for them to be allowed to return to Britain soon.
+
+
+These include Jamil El-Banna, a British refugee from Jordan, who
+was arrested alongside Al-Rawi in Gambia.
+
+
+Clive Stafford-Smith, his lawyer, has said that Al-Rawi was
+showing signs of secure housing unit psychosis, which affects
+prisoners held in high-security compounds, after spending four
+years in detention.
+
+
+Stafford-Smith described the conditions in which Al-Rawi was held
+as "worse than any death row I've ever seen."
+
+
+
+</TextWithNodes>
+<!-- The default annotation set -->
+
+<AnnotationSet>
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="Key">
+<Annotation Id="4214" Type="Mention_disamb" StartNode="314" EndNode="328">
+<Feature>
+  <Name className="java.lang.String">structSimV2UniDirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2Combined</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">relUriFreqByLabelInWp</Name>
+  <Value className="java.lang.Double">1.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">allLabels</Name>
+  <Value className="java.lang.String">bisher amin khalil al rawi|guantanamo captive 906|isn 906|bisher al-rawi|bisher amin khalil al-rawi|bisher al rawi</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">origLabels</Name>
+  <Value className="java.lang.String">Bisher al-Rawi|Bisher Al-Rawi</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://dbpedia.org/resource/Bisher_Amin_Khalil_al-Rawi</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">labelUriFreqInWp</Name>
+  <Value className="java.lang.Integer">9</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2BiIndirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">sources</Name>
+  <Value className="java.lang.String">label</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">dbpSpecificClass</Name>
+  <Value className="java.lang.String"></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarityVector</Name>
+  <Value className="java.lang.Double">0.11167774131504726</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">stringSimilarityBestLabel</Name>
+  <Value className="java.lang.Float">0.5</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">labelFreqInWp</Name>
+  <Value className="java.lang.Integer">9</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">airpSpecificClass</Name>
+  <Value className="java.lang.String">http://dbpedia.org/ontology/Person</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarity</Name>
+  <Value className="java.lang.Float">0.983</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">parenthesesInfo</Name>
+  <Value className="java.lang.String">NONE</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">dbpInterestingClass</Name>
+  <Value className="java.lang.String"></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">uriFreqInWp</Name>
+  <Value className="java.lang.Integer">26</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarityLucene</Name>
+  <Value className="java.lang.Float">0.52551585</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2SharedChild</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">wpPageId</Name>
+  <Value className="java.lang.Integer">2738980</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">class</Name>
+  <Value className="java.lang.String">true</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2SharedParent</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">label</Name>
+  <Value className="java.lang.String">bisher al-rawi</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">redirInfo</Name>
+  <Value className="java.lang.String">nodisamb</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2BiDirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">airpInterestingClass</Name>
+  <Value className="java.lang.String">http://dbpedia.org/ontology/Person</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">disambInfo</Name>
+  <Value className="java.lang.String">redir</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">relLabelFreqByUriInWp</Name>
+  <Value className="java.lang.Double">0.34615384615384615</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2UniIndirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">allOrigLabels</Name>
+  <Value className="java.lang.String">Bisher Amin Khalil Al Rawi|BISHER AMIN KHALIL AL RAWI|Bisher Amin Khalil al Rawi|Guantanamo captive 906|ISN 906|Bisher Amin Khalil al-Rawi|Bisher Amin Khalil Al-Rawi|Bisher Al Rawi|Bisher al Rawi|Bisher al-Rawi|Bisher Al-Rawi</Value>
+</Feature>
+</Annotation>
+<Annotation Id="129" Type="Mention" StartNode="314" EndNode="328">
+<Feature>
+  <Name className="java.lang.String">entityId</Name>
+  <Value className="java.lang.String">E0487663</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">wikiUri</Name>
+  <Value className="java.lang.String">http://en.wikipedia.org/wiki/Bisher_Amin_Khalil_al-Rawi</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">majorType</Name>
+  <Value className="java.lang.String">entities</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">docId</Name>
+  <Value className="java.lang.String">AFP_ENG_20070401.0302.LDC2009T13</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">type</Name>
+  <Value className="java.lang.String">UKN</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://dbpedia.org/resource/Bisher_Amin_Khalil_al-Rawi</Value>
+</Feature>
+</Annotation>
+</AnnotationSet>
+
+</GateDocument>

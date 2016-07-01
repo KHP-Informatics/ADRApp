@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<metadata xmlns="http://gate.ac.uk/ns/pipeline-metadata">
+  <pipeline-name>ANNIE+Measurements</pipeline-name>
+  <slug>annie-measurements</slug>
+  <ordering>50</ordering>
+  <annotation-selectors>:Address, :Date, :Location, :Measurement, :Organization, :Person</annotation-selectors>
+  <additional-annotations>:Money, :Percent, :Token, :SpaceToken, :Sentence, :Ratio</additional-annotations>
+  <tags>
+    <tag>English</tag>
+    <tag>Measurements</tag>
+    <tag>Named Entity</tag>
+  </tags>
+</metadata>

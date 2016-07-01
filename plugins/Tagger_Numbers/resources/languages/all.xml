@@ -1,0 +1,10 @@
+<config>
+  <description>All Languages</description>
+  <imports>
+    <url encoding="UTF-8">english.xml</url>
+    <url encoding="UTF-8">french.xml</url>
+    <url encoding="UTF-8">german.xml</url>
+    <url encoding="UTF-8">spanish.xml</url>
+    <url encoding="UTF-8">symbols.xml</url>
+  </imports>
+</config>

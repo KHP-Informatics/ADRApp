@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<GateDocument version="3">
+<!-- The document's features-->
+
+<GateDocumentFeatures>
+<Feature>
+  <Name className="java.lang.String">MatchesAnnots</Name>
+  <Value className="gate.corpora.ObjectWrapper"><![CDATA[<?xml version='1.0' encoding='UTF-8'?><gate.corpora.ObjectWrapper><value class="map"><entry><null/><list/></entry></value></gate.corpora.ObjectWrapper>]]></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">deleteNonNNPLookups</Name>
+  <Value className="java.lang.String">true</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">gate.SourceURL</Name>
+  <Value className="java.lang.String">file:/home/niraj/trendminer-sources/Data20092010/AFP_ENG_20070111.0269.LDC2009T13.sgm</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">lang</Name>
+  <Value className="java.lang.String">en</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">MimeType</Name>
+  <Value className="java.lang.String">text/sgml</Value>
+</Feature>
+</GateDocumentFeatures>
+<!-- The document content area with serialized nodes -->
+
+<TextWithNodes>
+ AFP_ENG_20070111.0269.LDC2009T13 
+ NEWS STORY 
+ 2007-01-11 
+
+
+Boy pleads with Blair for father's release from Guantanamo
+
+
+
+A 10-year-old boy whose father is detained in the Guantanamo Bay
+US prison camp personally delivered a poignant letter to British
+Prime Minister Tony Blair Thursday asking for help in securing
+his release.
+
+
+"I want to know if Mr Blair cares after four years," wrote Anas
+al-Banna as he visited Blair's office at 10 Downing Street with
+his nine-year-old brother Mohammed and Sarah Teather, a member of
+parliament.
+
+
+Their father Jamil al-Banna was arrested with a friend during a
+business trip to Gambia in 2002 on suspicion of links to
+terrorism before being handed over to US security officers and
+transferred to the camp in Cuba.
+
+
+Banna, a Jordanian, and <Node id="785"/>Bisher al-Rawi<Node id="799"/>, an Iraqi, are not British
+citizens but have the right to reside in Britain. Six other
+British residents are also believed held at the Guantanamo camp
+in Cuba.
+
+
+All British citizens were freed from Guantanamo by September
+2004, but London insists it has no power to intervene on behalf
+of foreign nationals, even if they have long been resident in
+Britain.
+
+
+"We are disappointed in Tony Blair," said Teather, a member of
+parliament from Banna's constituency.
+
+
+Anas in his fourth letter to the prime minister, one each year
+for the four he has been held, wrote: "No one knows what the
+meaning of four years without a dad and is he still alive? Only
+God knows.
+
+
+"No one knows how my life has changed after my dad was kidnapped
+from my life only because he didn't have British passport. Tony
+Blair, do you care if my dad is back or stuck there? Please give
+me an answer."
+
+
+The delivery of the letter -- a copy of which was printed on the
+front page of a British newspaper earlier this week -- is part of
+protests around the world to mark five years since Guantanmo's
+opening on January 11, 2002.
+
+
+The protests reached a climax in London with the reconstruction
+of the Guantanamo camp outside the US Embassy here.
+
+
+
+</TextWithNodes>
+<!-- The default annotation set -->
+
+<AnnotationSet>
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="Key">
+<Annotation Id="100" Type="Mention" StartNode="785" EndNode="799">
+<Feature>
+  <Name className="java.lang.String">entityId</Name>
+  <Value className="java.lang.String">E0487663</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">wikiUri</Name>
+  <Value className="java.lang.String">http://en.wikipedia.org/wiki/Bisher_Amin_Khalil_al-Rawi</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">majorType</Name>
+  <Value className="java.lang.String">entities</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">docId</Name>
+  <Value className="java.lang.String">AFP_ENG_20070111.0269.LDC2009T13</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">type</Name>
+  <Value className="java.lang.String">UKN</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://dbpedia.org/resource/Bisher_Amin_Khalil_al-Rawi</Value>
+</Feature>
+</Annotation>
+<Annotation Id="4967" Type="Mention_disamb" StartNode="785" EndNode="799">
+<Feature>
+  <Name className="java.lang.String">structSimV2UniDirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2Combined</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">relUriFreqByLabelInWp</Name>
+  <Value className="java.lang.Double">1.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">allLabels</Name>
+  <Value className="java.lang.String">bisher amin khalil al rawi|guantanamo captive 906|isn 906|bisher al-rawi|bisher amin khalil al-rawi|bisher al rawi</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">origLabels</Name>
+  <Value className="java.lang.String">Bisher al-Rawi|Bisher Al-Rawi</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://dbpedia.org/resource/Bisher_Amin_Khalil_al-Rawi</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">labelUriFreqInWp</Name>
+  <Value className="java.lang.Integer">9</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2BiIndirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">sources</Name>
+  <Value className="java.lang.String">label</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">dbpSpecificClass</Name>
+  <Value className="java.lang.String"></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarityVector</Name>
+  <Value className="java.lang.Double">0.06962980438415184</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">stringSimilarityBestLabel</Name>
+  <Value className="java.lang.Float">0.5</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">labelFreqInWp</Name>
+  <Value className="java.lang.Integer">9</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">airpSpecificClass</Name>
+  <Value className="java.lang.String">http://dbpedia.org/ontology/Person</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarity</Name>
+  <Value className="java.lang.Float">0.983</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">parenthesesInfo</Name>
+  <Value className="java.lang.String">NONE</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">dbpInterestingClass</Name>
+  <Value className="java.lang.String"></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">uriFreqInWp</Name>
+  <Value className="java.lang.Integer">26</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarityLucene</Name>
+  <Value className="java.lang.Float">0.67093396</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2SharedChild</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">wpPageId</Name>
+  <Value className="java.lang.Integer">2738980</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">class</Name>
+  <Value className="java.lang.String">true</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2SharedParent</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">label</Name>
+  <Value className="java.lang.String">bisher al-rawi</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">redirInfo</Name>
+  <Value className="java.lang.String">nodisamb</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2BiDirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">airpInterestingClass</Name>
+  <Value className="java.lang.String">http://dbpedia.org/ontology/Person</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">disambInfo</Name>
+  <Value className="java.lang.String">redir</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">relLabelFreqByUriInWp</Name>
+  <Value className="java.lang.Double">0.34615384615384615</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2UniIndirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">allOrigLabels</Name>
+  <Value className="java.lang.String">Bisher Amin Khalil Al Rawi|BISHER AMIN KHALIL AL RAWI|Bisher Amin Khalil al Rawi|Guantanamo captive 906|ISN 906|Bisher Amin Khalil al-Rawi|Bisher Amin Khalil Al-Rawi|Bisher Al Rawi|Bisher al Rawi|Bisher al-Rawi|Bisher Al-Rawi</Value>
+</Feature>
+</Annotation>
+</AnnotationSet>
+
+</GateDocument>

@@ -1,0 +1,107 @@
+/*
+ * Copyright (c) 2011, The University of Sheffield.
+ * 
+ * This file is part of GATE (see http://gate.ac.uk/), and is free software,
+ * licenced under the GNU Library General Public License, Version 3, June 2007
+ * (in the distribution as file licence.html, and also available at
+ * http://gate.ac.uk/gate/licence.html).
+ */
+
+Imports: {
+  import static gate.creole.numbers.AnnotationConstants.HINT_FEATURE_NAME;
+  import static gate.creole.numbers.AnnotationConstants.NUMBER_ANNOTATION_NAME;
+  import static gate.creole.numbers.AnnotationConstants.TYPE_FEATURE_NAME;
+  import static gate.creole.numbers.AnnotationConstants.VALUE_FEATURE_NAME;
+}
+
+Phase: Exponents
+
+Input: Token Number Split
+Options: control = appelt
+
+Rule: NumberExponent
+(
+  // an optional multiplier
+  (
+    ({Number.type == "numbers"}):multiplier
+    ({Token.string == "*"}
+    |{Token.string == "x"}
+    |{Token.string == "×"})
+  )?
+  
+  // the base number is always present
+  ({Number.type == "numbers"}):base
+  
+  // the exponent part is always present    
+  (({Token.string == "^"}
+  ({Number.type == "numbers"}))|{Number.type == "numbers", Number.hint == "sup"}):power
+):expNumber
+-->
+{
+  // delete Number annotations, they are superseded by Exponent annotations
+  AnnotationSet expSet = bindings.get("expNumber"); 
+  Long start = expSet.firstNode().getOffset();
+  Long end = expSet.lastNode().getOffset(); 
+  AnnotationSet toDelete = inputAS.getContained(start, end);
+  if(toDelete != null && toDelete.size() > 0) {
+    toDelete = toDelete.get("Number");
+    inputAS.removeAll(toDelete);
+  }
+
+  // calculate the whole numeric value
+  // every Number/Exponent annotations must have a feature 'value'
+  AnnotationSet multiplierSet = (AnnotationSet)bindings.get("multiplier");
+  Annotation multiplierAnn = (multiplierSet == null || multiplierSet.isEmpty()) ? null : multiplierSet.iterator().next();
+  double multiplier = (multiplierAnn == null) ? 1 : (Double) multiplierAnn.getFeatures().get("value");
+  
+  Annotation baseAnn = bindings.get("base").iterator().next();
+  double base = (Double)baseAnn.getFeatures().get("value");
+  
+  Annotation powerAnn = bindings.get("power").get("Number").iterator().next();
+  double power = (Double)powerAnn.getFeatures().get("value");
+    
+  // create a new number covering the extent
+  FeatureMap features = Factory.newFeatureMap(); 
+  features.put(TYPE_FEATURE_NAME, "numbers");
+  features.put(VALUE_FEATURE_NAME, multiplier * Math.pow(base, power));
+  try {
+    outputAS.add(start, end, NUMBER_ANNOTATION_NAME, features);
+  } catch(InvalidOffsetException ioe){
+    throw new LuckyException(ioe);
+  }
+}
+
+Rule: SciNotation
+(
+  ({Number.type == "numbers"}):base  
+  ({Token.string == "e"}|{Token.string == "E"})
+  ({Number.type == "numbers"}):power
+):sci
+-->
+{
+  // delete Number annotations, they are superseded by Exponent annotations
+  AnnotationSet expSet = bindings.get("sci"); 
+  Long start = expSet.firstNode().getOffset();
+  Long end = expSet.lastNode().getOffset(); 
+  AnnotationSet toDelete = inputAS.getContained(start, end);
+  if(toDelete != null && toDelete.size() > 0) {
+    toDelete = toDelete.get("Number");
+    inputAS.removeAll(toDelete);
+  }
+  
+  Annotation baseAnn = bindings.get("base").iterator().next();
+  double base = (Double)baseAnn.getFeatures().get("value");
+  
+  Annotation powerAnn = bindings.get("power").iterator().next();
+  double power = (Double)powerAnn.getFeatures().get("value");
+  
+  // create a new number covering the extent
+  FeatureMap features = Factory.newFeatureMap(); 
+  features.put(TYPE_FEATURE_NAME, "numbers");
+  features.put(VALUE_FEATURE_NAME, base * Math.pow(10, power));
+  try {
+    outputAS.add(start, end, NUMBER_ANNOTATION_NAME, features);
+  } catch(InvalidOffsetException ioe){
+    throw new LuckyException(ioe);
+  }
+}

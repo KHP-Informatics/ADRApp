@@ -1,0 +1,63 @@
+<p><img src="ann-job-measurements.png" style="float: right"/>Annotate
+<em>numbers</em> and <em>measurement expressions</em> in text.  This pipeline
+recognises many types of measurements including length, temperature, time and
+speed, and calculates their normalised values in the SI system of units.  These
+annotations are ideal for indexing with M&iacute;mir, which supports queries in
+one unit matching results expressed in another.</p>
+
+<p>As a side-effect this pipeline also annotates tokens and sentences.</p>
+
+<table>
+  <tr>
+    <td colspan="4"><b>Default annotations</b></td>
+  </tr>
+  <tr>
+    <td colspan="2"><tt>:Measurement</tt></td>
+    <td colspan="2">Measurement expressions, with features:</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2"><tt>type</tt></td>
+    <td>"scalar" for single measurements, or "interval" for intervals (e.g. "1 to 5 pounds")</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2"><tt>unit</tt></td>
+    <td>The unit of the measurement (gram, mile, ...)</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2"><tt>value</tt></td>
+    <td>The numeric value of the measurement quantity as specified in the text</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2"><tt>normalizedUnit</tt></td>
+    <td>The "normalized" unit for the measurement in the SI system (kilogram, metre, etc.)</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2"><tt>normalizedValue</tt></td>
+    <td>The equivalent value of the measurement in the normalized unit.  For interval measurements this is replaced by a "normalizedMaxValue" and "normalizedMinValue" giving the end-points of the interval.</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2"><tt>dimension</tt></td>
+    <td>Speed, volume, area, time, etc.</td>
+  </tr>
+  <tr>
+    <td colspan="4"><b>Additional annotations available if selected</b></td>
+  </tr>
+  <tr>
+    <td colspan="2"><tt>:Sentence</tt></td>
+    <td colspan="2">Sentences detected by the sentence splitter</td>
+  </tr>
+  <tr>
+    <td colspan="2"><tt>:Token</tt></td>
+    <td colspan="2">The individual tokens of the text</td>
+  </tr>
+  <tr>
+    <td colspan="2"><tt>:Ratio</tt></td>
+    <td colspan="2">Expressions denoting a ratio rather than a simple measurement, typically percentages but also expressions like "300 parts per million"</td>
+  </tr>
+</table>

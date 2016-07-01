@@ -1,0 +1,123 @@
+<project name="Tagger_Measurements" basedir=".">
+  <!-- Prevent Ant from warning about includeantruntime not being set -->
+  <property name="build.sysclasspath" value="ignore" />
+  
+	<property file="build.properties" />
+
+	<property name="gate.home" location="../.." />
+	<property name="gate.lib" location="${gate.home}/lib" />
+	<property name="gate.jar" location="${gate.home}/bin/gate.jar" />
+	<property name="src.dir" location="src" />
+	<property name="classes.dir" location="classes" />
+	<property name="jar.location" location="MeasurementTagger.jar" />
+	<property name="doc.dir" location="doc" />
+	<property name="javadoc.dir" location="${doc.dir}/javadoc" />
+	<property name="test.dir" location="test" />
+	<property name="test.reports.dir" location="${test.dir}/reports" />
+	<property name="test.src.dir" location="${test.dir}/src" />
+	<property name="test.classes.dir" location="${test.dir}/classes" />
+
+	<!-- Path to compile - includes gate.jar and GATE/lib/*.jar -->
+	<path id="compile.classpath">
+		<pathelement location="${gate.jar}" />
+		<fileset dir="${gate.lib}">
+			<include name="**/*.jar" />
+			<include name="**/*.zip" />
+		</fileset>
+	</path>
+
+	<!-- create build directory structure -->
+	<target name="prepare">
+		<mkdir dir="${classes.dir}" />
+	</target>
+
+	<!-- compile the source -->
+	<target name="compile" depends="prepare">
+		<javac classpathref="compile.classpath" srcdir="${src.dir}" destdir="${classes.dir}" debug="true" debuglevel="lines,source" source="1.5" target="1.5" />
+	</target>
+
+	<target name="resources" depends="prepare">
+		<copy todir="${classes.dir}/gate/resources" includeEmptyDirs="true">
+			<fileset dir="${src.dir}/gate/resources" />
+		</copy>
+	</target>
+
+	<!-- create the JAR file -->
+	<target name="jar" depends="compile, resources">
+		<jar destfile="${jar.location}" update="false" basedir="${classes.dir}" />
+	</target>
+
+	<!-- remove the generated .class files -->
+	<target name="clean.classes">
+		<delete dir="${classes.dir}" />
+                <delete dir="${test.classes.dir}" />
+                <delete dir="${test.reports.dir}" />
+	</target>
+
+	<!-- Clean up - remove .class and .jar files -->
+	<target name="clean" depends="clean.classes">
+		<delete file="${jar.location}" />
+	</target>
+
+	<!-- Targets used by the main GATE build file:
+         build: build the plugin - just calls "jar" target
+         test : run the unit tests - there aren't any
+         distro.prepare: remove intermediate files that shouldn't be in the
+                         distribution
+  -->
+
+	<!-- Build JavaDoc documentation -->
+	<target name="doc.prepare">
+		<mkdir dir="${javadoc.dir}" />
+	</target>
+
+	<target name="javadoc" depends="doc.prepare">
+		<javadoc destdir="${javadoc.dir}" packagenames="*" classpathref="compile.classpath" encoding="UTF-8" windowtitle="Measurements Tagger JavaDoc" source="1.6" public="true">
+			<sourcepath>
+				<pathelement location="${src.dir}" />
+			</sourcepath>
+			<link href="http://docs.oracle.com/javase/6/docs/api/" />
+     			<link href="http://gate.ac.uk/gate/doc/javadoc/" />
+		</javadoc>
+	</target>
+
+	<target name="build" depends="jar" />
+
+	<!-- Remove JUnit test results -->
+	<target name="distro.prepare" depends="clean.classes">
+		<delete>
+			<fileset dir="." includes="TEST*.xml" />
+		</delete>
+	</target>
+
+
+	<!-- Unit tests -->
+
+	<path id="test.classpath">
+		<path refid="compile.classpath" />
+		<pathelement location="${jar.location}" />
+	</path>
+
+	<target name="test.prepare">
+		<mkdir dir="${test.classes.dir}" />
+		<mkdir dir="${test.reports.dir}" />
+	</target>
+
+	<target name="test.compile" depends="test.prepare, build">
+		<javac classpathref="test.classpath" srcdir="${test.src.dir}" destdir="${test.classes.dir}" debug="true" debuglevel="lines,source" source="1.5" />
+	</target>
+
+	<target name="test" depends="test.compile">
+		<junit fork="yes" haltonfailure="no" printsummary="on">
+			<test name="gate.creole.measurements.MeasurementsTest" toDir="${test.reports.dir}" />
+			<sysproperty key="gate.measurements.plugin.dir"
+				     file="${basedir}" />
+			<formatter type="xml" />
+			<classpath>
+				<path refid="test.classpath" />
+				<pathelement path="${test.classes.dir}" />
+			</classpath>
+		</junit>
+	</target>
+
+</project>

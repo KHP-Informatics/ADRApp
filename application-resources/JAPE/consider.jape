@@ -1,0 +1,21 @@
+Phase: ConsiderNegTest1
+Input: Lookup Token Split
+Options: control = first
+
+Rule: considerbefore
+(
+  {Token.string == "consider"}
+  ({Lookup.majorType == "ADR"}):ADR
+  
+
+):considerbefore
+-->
+:considerbefore{
+  AnnotationSet set= bindings.get("ADR");
+  for (Annotation ann : set){
+   ann.getFeatures().put("ignoreMe",Boolean.TRUE);
+   ann.getFeatures().put("rule", "considerbefore");
+  }
+
+}
+

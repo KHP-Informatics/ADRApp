@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<ML-CONFIG>
+  <VERBOSITY level="0"/>
+  <SURROUND value="true"/>
+
+  <PARAMETER name="thresholdProbabilityEntity" value="0.2"/>
+  <PARAMETER name="thresholdProbabilityBoundary" value="0.40"/>
+  <PARAMETER name="thresholdProbabilityClassification" value="0.5"/>
+
+  <multiClassification2Binary method="one-vs-others"/>
+
+  <!-- Evaluation : how to split the corpus into test and learn? -->
+  <EVALUATION method="kfold" runs="2"/>
+
+  <ENGINE nickname="NB" implementationName="NaiveBayesWeka"/>
+
+  <DATASET>
+    <INSTANCE-TYPE>Token</INSTANCE-TYPE>
+    <ATTRIBUTELIST>
+	<NAME>Form</NAME>
+	<SEMTYPE>NOMINAL</SEMTYPE>
+	<TYPE>Token</TYPE>
+	<FEATURE>string</FEATURE>
+	<RANGE from="-5" to="5"/>
+    </ATTRIBUTELIST>
+
+    <ATTRIBUTELIST>
+	<NAME>Orthography</NAME>
+	<SEMTYPE>NOMINAL</SEMTYPE>
+	<TYPE>Token</TYPE>
+	<FEATURE>orth</FEATURE>
+	<RANGE from="-5" to="5"/>
+     </ATTRIBUTELIST>
+		
+     <ATTRIBUTELIST>
+	<NAME>Tokenkind</NAME>
+	<SEMTYPE>NOMINAL</SEMTYPE>
+	<TYPE>Token</TYPE>
+	<FEATURE>kind</FEATURE>
+	<RANGE from="-5" to="5"/>
+     </ATTRIBUTELIST>
+
+     <ATTRIBUTELIST>
+	<NAME>Lemma</NAME>
+	<SEMTYPE>NOMINAL</SEMTYPE>
+	<TYPE>Token</TYPE>
+	<FEATURE>root</FEATURE>
+	<RANGE from="-5" to="5"/>
+     </ATTRIBUTELIST>
+
+     <ATTRIBUTELIST>
+	<NAME>Gaz</NAME>
+	<SEMTYPE>NOMINAL</SEMTYPE>
+	<TYPE>Lookup</TYPE>
+	<FEATURE>majorType</FEATURE>
+	<RANGE from="-5" to="5"/>
+     </ATTRIBUTELIST>
+
+     <ATTRIBUTELIST>
+	<NAME>EntityType</NAME>
+	<SEMTYPE>NOMINAL</SEMTYPE>
+	<TYPE>Entity</TYPE>
+	<FEATURE>type</FEATURE>
+	<RANGE from="-5" to="5"/>
+     </ATTRIBUTELIST>
+
+     <ATTRIBUTE>
+	<NAME>Class</NAME>
+	<SEMTYPE>NOMINAL</SEMTYPE>
+	<TYPE>Mention</TYPE>
+	<FEATURE>class</FEATURE>
+	<POSITION>0</POSITION>
+	<CLASS/>
+     </ATTRIBUTE>
+   </DATASET>
+  
+</ML-CONFIG>
+

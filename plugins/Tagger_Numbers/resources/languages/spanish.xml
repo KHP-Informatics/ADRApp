@@ -1,0 +1,65 @@
+<config>
+  <description>Spanish</description>
+  <words>
+    <word value="16.0">dieciséis</word>
+    <word value="29.0">veintinueve</word>
+    <word value="9.0">nueve</word>
+    <word value="24.0">veinticuatro</word>
+    <word value="700.0">setecientos</word>
+    <word value="15.0">quince</word>
+    <word value="18.0">dieciocho</word>
+    <word value="20.0">veinte</word>
+    <word value="19.0">diecinueve</word>
+    <word value="10.0">diez</word>
+    <word value="800.0">ochocientos</word>
+    <word value="50.0">cincuenta</word>
+    <word value="23.0">veintitrés</word>
+    <word value="2.0">dos</word>
+    <word value="70.0">setenta</word>
+    <word value="12.0">doce</word>
+    <word value="4.0">cuatro</word>
+    <word value="900.0">nuevecientos</word>
+    <word value="600.0">seiscientos</word>
+    <word value="27.0">veintisiete</word>
+    <word value="300.0">trescientos</word>
+    <word value="90.0">noventa</word>
+    <word value="17.0">diecisiete</word>
+    <word value="22.0">veintidós</word>
+    <word value="25.0">veinticinco</word>
+    <word value="500.0">quinientos</word>
+    <word value="30.0">treinta</word>
+    <word value="28.0">veintiocho</word>
+    <word value="26.0">veintiséis</word>
+    <word value="6.0">seis</word>
+    <word value="11.0">once</word>
+    <word value="8.0">ocho</word>
+    <word value="3.0">tres</word>
+    <word value="13.0">trece</word>
+    <word value="0.0">cero</word>
+    <word value="80.0">ochenta</word>
+    <word value="1.0">uno</word>
+    <word value="21.0">veintiuno</word>
+    <word value="60.0">sesenta</word>
+    <word value="14.0">catorce</word>
+    <word value="400.0">cuatrocientos</word>
+    <word value="200.0">doscientos</word>
+    <word value="40.0">cuarenta</word>
+    <word value="7.0">siete</word>
+    <word value="5.0">cinco</word>
+  </words>
+  <multipliers>
+    <word value="18.0">trillón</word>
+    <word value="3.0">mil</word>
+    <word value="2.0">ciento</word>
+    <word value="30.0">quintillón</word>
+    <word value="12.0">billón</word>
+    <word value="6.0">millón</word>
+    <word value="2.0">cientos</word>
+    <word value="24.0">cuatrillón</word>
+    <word value="2.0">cien</word>
+    <word value="9.0">millardo</word>
+  </multipliers>
+  <conjunctions>
+    <word whole="true">y</word>
+  </conjunctions>
+</config>

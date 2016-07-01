@@ -1,0 +1,11 @@
+Phase: PuncMatch
+Input: Token
+Options: control = appelt
+
+Rule: puncmatch
+(
+ {Token.kind == "punctuation"}
+
+):puncmatch
+-->
+ :puncmatch.puncmatch={}

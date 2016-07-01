@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<ML-CONFIG>
+  <VERBOSITY level="2"/>
+  <FILTERING ratio="0.0" dis="far"/>
+ <SURROUND value="true"/>
+
+<PARAMETER name="thresholdProbabilityEntity" value="0.3"/>
+<PARAMETER name="thresholdProbabilityBoundary" value="0.50"/>
+<PARAMETER name="thresholdProbabilityClassification" value="0.5"/>
+
+<multiClassification2Binary method="one-vs-others"/>
+<!-- To test with a thread pool, comment out the line above and uncomment the
+next one.
+<multiClassification2Binary method="one-vs-others" thread-pool-size="4"/>
+-->
+
+<!-- Evaluation : how to split the corpus into test and learn? -->
+<EVALUATION method="split" runs="2" ratio="0.66"/>
+
+  <ENGINE nickname="SVM" implementationName="SVMExec" 
+    executableTraining="C:\yaoyong_h\software\svm-light\svm_learn.exe "
+options=" -c 0.7 -t 0 -m 100 -v 0 -tau 0.6  C:\yaoyong_h\software\svm-light\data_svm.dat C:\yaoyong_h\software\svm-light\model_svm.dat"/>
+
+
+<DATASET>
+		<INSTANCE-TYPE>Token</INSTANCE-TYPE>
+
+<WINDOWSIZE windowSizeLeft="5" windowSizeRight="5"/>
+
+		<ATTRIBUTELIST>
+			<NAME>Form</NAME>
+			<SEMTYPE>NOMINAL</SEMTYPE>
+			<TYPE>Token</TYPE>
+			<FEATURE>string</FEATURE>
+			<RANGE from="-5" to="5"/>
+		</ATTRIBUTELIST>
+
+		<ATTRIBUTELIST>
+			<NAME>Ortho</NAME>
+			<SEMTYPE>NOMINAL</SEMTYPE>
+			<TYPE>Token</TYPE>
+			<FEATURE>orth</FEATURE>
+			<RANGE from="-5" to="5"/>
+		</ATTRIBUTELIST>
+                <ATTRIBUTELIST>
+			<NAME>Tokenkind</NAME>
+			<SEMTYPE>NOMINAL</SEMTYPE>
+			<TYPE>Token</TYPE>
+			<FEATURE>kind</FEATURE>
+			<RANGE from="-5" to="5"/>
+		</ATTRIBUTELIST>
+
+		<ATTRIBUTELIST>
+			<NAME>Lemma</NAME>
+			<SEMTYPE>NOMINAL</SEMTYPE>
+			<TYPE>Token</TYPE>
+			<FEATURE>root</FEATURE>
+			<RANGE from="-5" to="5"/>
+		</ATTRIBUTELIST>
+
+		<ATTRIBUTELIST>
+			<NAME>Gaz</NAME>
+			<SEMTYPE>NOMINAL</SEMTYPE>
+			<TYPE>Lookup</TYPE>
+			<FEATURE>majorType</FEATURE>
+			<RANGE from="-5" to="5"/>
+		</ATTRIBUTELIST>
+
+		<ATTRIBUTELIST>
+			<NAME>EntityType</NAME>
+			<SEMTYPE>NOMINAL</SEMTYPE>
+			<TYPE>Entity</TYPE>
+			<FEATURE>type</FEATURE>
+			<RANGE from="-5" to="5"/>
+		</ATTRIBUTELIST>
+
+	
+		<ATTRIBUTE>
+			<NAME>Class</NAME>
+			<SEMTYPE>NOMINAL</SEMTYPE>
+			<TYPE>Mention</TYPE>
+			<FEATURE>class</FEATURE>
+			<POSITION>0</POSITION>
+			<CLASS/>
+		</ATTRIBUTE>
+	</DATASET>
+
+</ML-CONFIG>
+

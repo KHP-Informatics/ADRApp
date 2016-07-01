@@ -1,0 +1,265 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<GateDocument version="3">
+<!-- The document's features-->
+
+<GateDocumentFeatures>
+<Feature>
+  <Name className="java.lang.String">MatchesAnnots</Name>
+  <Value className="gate.corpora.ObjectWrapper"><![CDATA[<?xml version='1.0' encoding='UTF-8'?><gate.corpora.ObjectWrapper><value class="map"><entry><null/><list/></entry></value></gate.corpora.ObjectWrapper>]]></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">deleteNonNNPLookups</Name>
+  <Value className="java.lang.String">true</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">gate.SourceURL</Name>
+  <Value className="java.lang.String">file:/home/niraj/trendminer-sources/Data20092010/AFP_ENG_20070124.0567.LDC2009T13.sgm</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">lang</Name>
+  <Value className="java.lang.String">en</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">MimeType</Name>
+  <Value className="java.lang.String">text/sgml</Value>
+</Feature>
+</GateDocumentFeatures>
+<!-- The document content area with serialized nodes -->
+
+<TextWithNodes>
+ AFP_ENG_20070124.0567.LDC2009T13 
+ NEWS STORY 
+ 2007-01-24 
+
+
+ECOWAS condemns killings in <Node id="92"/>Guinea<Node id="98"/>
+
+
+
+The West African bloc ECOWAS on Wednesday condemned the
+"mounting" killing of civilians in Guinea as a result of the
+political crisis.
+
+
+"Any loss of life is regrettable but the killing of unarmed
+civilians is particularly unacceptable," the Economic Community
+of West African States (ECOWAS) said in a statement.
+
+
+"ECOWAS calls upon the Guinean authorities to guarantee the
+safety and security of its citizens while they express their
+constitutional rights of freedom of association and free
+expression," it said.
+
+
+The 15-member organisation said that it was evident that the
+current crisis in Guinea could only be resolved by genuine
+dialogue amongst all Guinean stakeholders in an atmosphere free
+of intimidation and violence.
+
+
+It stated its readiness to assist in finding a lasting resolution
+to the crisis.
+
+
+"In that regard, the ECOWAS Chairman, President Blaise Compaore,
+is engaged in consultations aimed at dispatching a mission to
+Guinea to facilitate a peaceful resolution of the crisis," the
+text said.
+
+
+The African Union and United Nations have also condemned the
+brutal supression of the popular protests by Guinea security
+authorities.
+
+
+The labour strike that has paralysed Guinea led to a bloody
+crackdown on political protests in which security forces have
+killed 44 people in two weeks.
+
+
+The strike, called by the unions and backed by 14 opposition
+parties, began on January 10, almost a month after the head of
+state, General Lansana Conte, personally freed two senior close
+aides who were jailed and faced trial for embezzlement.
+
+
+Strike leaders are demanding that the 72-year-old president, who
+suffers from chronic diabetes and memory lapses, be
+constitutionally removed by the Supreme Court on the grounds that
+he is too unwell to stay in office.
+
+
+
+</TextWithNodes>
+<!-- The default annotation set -->
+
+<AnnotationSet>
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="Key">
+<Annotation Id="155" Type="Mention" StartNode="92" EndNode="98">
+<Feature>
+  <Name className="java.lang.String">entityId</Name>
+  <Value className="java.lang.String">E0472515</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">wikiUri</Name>
+  <Value className="java.lang.String">http://en.wikipedia.org/wiki/Guinea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">majorType</Name>
+  <Value className="java.lang.String">entities</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">docId</Name>
+  <Value className="java.lang.String">AFP_ENG_20070124.0567.LDC2009T13</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">type</Name>
+  <Value className="java.lang.String">Location</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://dbpedia.org/resource/Guinea</Value>
+</Feature>
+</Annotation>
+<Annotation Id="2788" Type="Mention_disamb" StartNode="92" EndNode="98">
+<Feature>
+  <Name className="java.lang.String">structSimV2UniDirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">relUriFreqByLabelInWp</Name>
+  <Value className="java.lang.Double">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2Combined</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">annieOverlapMatch</Name>
+  <Value className="java.lang.String">mismatch</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">origLabels</Name>
+  <Value className="java.lang.String">Guinea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">allLabels</Name>
+  <Value className="java.lang.String">lower guinea forests|lower guinean forests|guinea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">labelUriFreqInWp</Name>
+  <Value className="java.lang.Integer">0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://dbpedia.org/resource/Lower_Guinean_forests</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2BiIndirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">sources</Name>
+  <Value className="java.lang.String">label</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarityVector</Name>
+  <Value className="java.lang.Double">0.013575195067381668</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">dbpSpecificClass</Name>
+  <Value className="java.lang.String"></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">stringSimilarityBestLabel</Name>
+  <Value className="java.lang.Float">0.5</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">labelFreqInWp</Name>
+  <Value className="java.lang.Integer">3495</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">annieExactMatch</Name>
+  <Value className="java.lang.String">mismatch</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarity</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">airpSpecificClass</Name>
+  <Value className="java.lang.String">http://dbpedia.org/ontology/Animal</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">parenthesesInfo</Name>
+  <Value className="java.lang.String">disambiguation</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">dbpInterestingClass</Name>
+  <Value className="java.lang.String"></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">uriFreqInWp</Name>
+  <Value className="java.lang.Integer">19</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarityLucene</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2SharedChild</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">wpPageId</Name>
+  <Value className="java.lang.Integer">4599622</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">class</Name>
+  <Value className="java.lang.String">false</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2SharedParent</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">label</Name>
+  <Value className="java.lang.String">guinea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">redirInfo</Name>
+  <Value className="java.lang.String">disamb</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2BiDirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">airpInterestingClass</Name>
+  <Value className="java.lang.String">http://www.w3.org/2002/07/owl#Thing</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">disambInfo</Name>
+  <Value className="java.lang.String">nonredir</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">relLabelFreqByUriInWp</Name>
+  <Value className="java.lang.Double">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2UniIndirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">allOrigLabels</Name>
+  <Value className="java.lang.String">Lower Guinean forests|Lower Guinean Forests|Lower Guinea forests|Lower Guinea Forests|Guinea</Value>
+</Feature>
+</Annotation>
+</AnnotationSet>
+
+</GateDocument>

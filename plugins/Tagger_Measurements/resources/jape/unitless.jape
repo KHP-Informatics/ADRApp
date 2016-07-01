@@ -1,0 +1,133 @@
+/*
+ * Copyright (c) 2009-2011, The University of Sheffield.
+ * 
+ * This file is part of GATE (see http://gate.ac.uk/), and is free software,
+ * Licensed under the GNU Library General Public License, Version 3, June 2007
+ * (in the distribution as file licence.html, and also available at
+ * http://gate.ac.uk/gate/licence.html).
+ */
+ 
+Imports: {
+import gate.creole.measurements.*;
+}
+
+Phase: Unitless
+
+Input: Number Token Measurement CannotBeAMeasurement
+Options: control = appelt
+
+Rule:Ignore
+Priority: 1000
+(
+	{CannotBeAMeasurement}|{Measurement}
+)
+-->
+{}
+
+Rule:UnitlessNumber
+Priority: 50
+(
+  ({Number}):number
+  ({Token.string == "to"}|{Token.string == "\u00D7"}|{Token.string == "-"}|{Token.string == "~"})
+  ({Token.string == "about"})?
+  ({Measurement}):measurement
+)
+-->
+{
+  try {
+    Annotation number = ((AnnotationSet)bindings.get("number")).iterator().next();
+    Annotation measurement = ((AnnotationSet)bindings.get("measurement")).iterator().next();
+
+    FeatureMap fm = Factory.newFeatureMap();
+
+    String unit = (String)measurement.getFeatures().get("unit");
+    
+    MeasurementsParser parser = (MeasurementsParser)getActionContext().getPRFeatures().get("measurementsParser");
+    boolean consumeNumberAnnotations = (Boolean)getActionContext().getPRFeatures().get("consumeNumberAnnotations");
+
+    Measurement v = parser.parse((Double)number.getFeatures().get("value"), unit);
+
+    if (v == null) return;
+
+    FeatureMap features = Factory.newFeatureMap();
+    features.put("type","scalar");
+    features.put("rule","unitlessNumber");
+    features.put("normalized", v.toString());
+    features.put("value", v.getValue());
+    features.put("unit", unit);
+
+    features.put("normalizedUnit", v.getNormalizedUnit());
+    features.put("normalizedValue", v.getNormalizedValue());
+
+    Object dimension = measurement.getFeatures().get("dimension");
+    if (dimension != null) features.put("dimension",dimension);
+    
+    features.put("rule","unitless");
+
+    outputAS.add(number.getStartNode().getOffset(),number.getEndNode().getOffset(),"Measurement", features);
+    
+    if (consumeNumberAnnotations) inputAS.remove(number);
+  }
+  catch (Exception e) {
+    throw new NonFatalJapeException(e);
+  }
+}
+
+Rule:FindListedMeasures
+/*
+ * 27, 34 and 12 mm
+ */
+(
+  ({Number}({Token.string == ","})?)[1,10]:numbers
+  ({Token.string == "and"}|{Token.string == "or"})
+  ({Token.string == "about"})?
+  ({Measurement}):measurement
+)
+-->
+{
+  try {
+    AnnotationSet numbersSet = (AnnotationSet)bindings.get("numbers");
+    Annotation measurement = ((AnnotationSet)bindings.get("measurement")).iterator().next();
+
+    FeatureMap fm = Factory.newFeatureMap();
+
+    AnnotationSet nInmSet = inputAS.get("Number", fm, measurement.getStartNode().getOffset());
+
+    if (nInmSet.size() != 1) return;
+
+    String unit = doc.getContent().getContent(nInmSet.lastNode().getOffset(),measurement.getEndNode().getOffset()).toString().trim();
+
+    MeasurementsParser parser = (MeasurementsParser)getActionContext().getPRFeatures().get("measurementsParser");
+	boolean consumeNumberAnnotations = (Boolean)getActionContext().getPRFeatures().get("consumeNumberAnnotations");
+
+    for (Annotation numberAnn : numbersSet.get("Number")) {
+      if (!inputAS.getContained(numberAnn.getStartNode().getOffset(), numberAnn.getEndNode().getOffset()).get("Measurement", fm).isEmpty()) {
+        // if already annotated as a scalarValue, skip it
+        continue;
+      }
+
+      Measurement v = parser.parse((Double)numberAnn.getFeatures().get("value"), unit);
+
+      if (v == null) continue;
+
+      FeatureMap features = Factory.newFeatureMap();
+      features.put("type","scalar");
+      features.put("rule","findListedMeasures");
+      features.put("normalized", v.toString());
+      features.put("value", v.getValue());
+      features.put("unit", unit);
+
+      Object dimension = measurement.getFeatures().get("dimension");
+      if (dimension != null) features.put("dimension",dimension);
+
+      features.put("normalizedUnit", v.getNormalizedUnit());
+      features.put("normalizedValue", v.getNormalizedValue());
+      outputAS.add(numberAnn.getStartNode(), numberAnn.getEndNode(),"Measurement", features);
+      
+      if (consumeNumberAnnotations) inputAS.remove(numberAnn);
+    }
+  }
+  catch (Exception e) {
+    throw new NonFatalJapeException(e);
+  }
+}

@@ -1,0 +1,433 @@
+<gate.util.persistence.GateApplication>
+  <urlList class="gate.util.persistence.CollectionPersistence">
+    <localList>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$relpath$../../../ANNIE</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$relpath$../../../Gazetteer_LKB</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+    </localList>
+    <collectionType>java.util.ArrayList</collectionType>
+  </urlList>
+  <application class="gate.util.persistence.SerialAnalyserControllerPersistence">
+    <corpus class="gate.util.persistence.CorpusPersistence">
+      <docList>
+        <gate.util.persistence.LRPersistence>
+          <resourceType>gate.corpora.DocumentImpl</resourceType>
+          <resourceName>Wikipedia: Ricky Hui</resourceName>
+          <initParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>markupAware</string>
+                <boolean>true</boolean>
+              </entry>
+              <entry>
+                <string>stringContent</string>
+                <string>Ricky Hui - Wikipedia, the free encyclopedia
+
+Ricky Hui
+From Wikipedia, the free encyclopedia
+Jump to: navigation , search
+Ricky Hui
+Chinese name 許冠英 ( Traditional )
+Chinese name 许冠英 ( Simplified )
+Pinyin Xǔ Guànyīng ( Mandarin )
+Jyutping heoi2 gun3 jing1 ( Cantonese )
+Ancestry Panyu , Guangdong
+Origin Hong Kong
+Born ( 1946-08-03 ) August 3, 1946
+Panyu , Guangdong
+Died November 8, 2011 ( 2011-11-08 ) (aged 65)
+Hong Kong
+Occupation Actor, singer
+Genre(s) Cantopop
+Years active 1972–2011
+Parents Hui Sai Cheung (father)
+Lee See Wun (mother)
+
+Ricky Hui Koon-Ying (August 3, 1946 – November 8, 2011) ( Chinese : 許冠英 ) was a Hong Kong movie star. He and his brothers, Michael and Sam , made several comedy blockbusters in the 1970s and 1980s.
+Contents
+1 Biography 1.1 Films
+1.2 Music
+
+2 Death
+3 Filmography
+4 References
+5 External links
+
+Biography [ edit ]
+
+Ricky Hui Koon Ying was born August 3, 1946 in Panyu , Guangdong , China . He has four siblings, Samuel, Michael, Stanley and Judy. The Hui family migrated from mainland China to Hong Kong in 1950 and settled in the then poor area of Diamond Hill . His father worked hard and undertook any work available to be able to support his family. In the Hui family Arts played a very significant role. Ricky's father played the violin and his mother loved Cantonese opera .
+Films [ edit ]
+
+Ricky worked as a correspondent for the French Press Agency in Hong Kong. He also frequently appeared in Shaw Brothers films between 1972 and 1976, such as The Lizard (1972), The 14 Amazons (1972), The Sugar Daddies (1973), The Generation Gap (1973), Rivals of Kung Fu (1974), Hong Kong 73 (1974) etc. For him the big break came when he joined his brothers on screen.
+
+The first time was in Games Gamblers Play (1974) as a card player followed by The Last Message (1975) with a short appearance as a waiter. The dialogue between him and Sam's character is hilarious. Ricky got a slightly bigger role in The Private Eyes (1976) and with that film a new era of the Hong Kong Cinema started. The brothers together made the best comedies the Hong Kong film industry has ever seen. Their films were packed with visual gags and the unique Cantonese humor. Although Ricky had only a small role in The Private Eyes , it remained one of the all time favorites among fans. According to Michael Hui, Ricky had only brief appearance in this film because at that time he had a contract with Shaw Brothers . Sources believe that contract ended around 1976, because the last Shaw Brothers film he appeared in was Challenge of the Masters that year. The following year found Ricky at Golden Harvest with a leading role in John Woo 's Money Crazy . In 1979 Games Gamblers Play was released for the Japanese market. For this edition Michael shot a new scene, a fight between Ricky and Sam on the beach, and replaced the original Sammo Hung vs Sam Hui fight with it. The next Hui brothers production where Ricky teamed up with his brothers again was The Contract in 1978, followed by Security Unlimited (1981), one of the biggest success of the brothers, full of gags and their trademark Cantonese humor. In the late 1970s and early 1980s Ricky played leading roles in John Woo films like From Riches To Rags (1979), To Hell with the Devil (1982) or Plain Jane To The Rescue (1982).
+
+Michael became a producer in 1987 and Ricky appeared in his films: Chicken and Duck Talk (1988), Front Page (1990), The Magic Touch (1992). In 1985 Sammo Hung produced one of the biggest cult films Mr. Vampire where Ricky Hui played Man Choi, a memorable role on the side of the unforgettable ( Lam Ching Ying ).
+
+Ricky was most active in his film career in the 1970s and 1980s. In the late 1990s he appeared in only one film, in First Love Unlimited (1997). He later rejoined with his brother Sam Hui in Winner Takes All (2000). The last films Ricky Hui appeared in are Super Model and Forever Yours , both from 2004.
+Music [ edit ]
+
+Ricky is not only an actor but a very good singer, too. He has released seven albums, most of them on vinyl in the 1970s and 1980s. There are three Ricky albums on vinyl: 發錢寒 (1977), 夏之戀 (1978), 錢作怪 (1980). In 1993 '93 急流? was released, which featured new songs by Sam Hui and guest vocals from Michael Hui . The second album in 1993 was 一生渴望 (Lifelong Desire) a 2-CD set that featured one CD of hits from the 1970s and 1980s, and brand-new Mandarin recordings of songs from '93 急流?. It also paved the way for Ricky's 2 shows at the Hong Kong Coliseum (produced by Sam Hui). The third CD was released in 2001, called The Classical Songs of Universal. It is the re-released version of the album from 1980 with a few extra songs. The last, Greatest Hits album (2CDs), 十足斤兩, was released ony July 26, 2006.
+
+Ricky not only sings but also wrote some songs for his brother Sam: On Sam Hui's debut Cantonese album, Ricky wrote 3 complete songs (music and lyrics): Track 3 (甜蜜伴侶), track 4 (無情夜冷風), and track 11 (夜雨聲). On Sam's 2nd Cantonese album, Ricky contributed 2 songs: track 5 (情人離別去), track 10 (歡樂桃源), and track 11 (故苑懷舊). On Sam's 3rd Cantonese album, Ricky has one contribution: track 12 (流水恨). He also wrote a song that can only be heard on his own debut album in 1977: 月影.
+
+In 2000 Ricky had a stage play called Ha Luk Hei Ban. In the same year he appeared in five episodes of the ATV series Heung Gong Yat Ka Chun . In 2001 a DVD was released of a variety show about the development of Hong Kong entertainment, called Laughing Kaleidoscope which featured Ricky among various artists on stage. In the same year he participated with three songs in the La Fai Palace Jubilee concert. In 2003 Ricky appeared in a concert commemorating the 8th anniversary of the death of Teresa Teng Lai-Kwun and also celebrating her 50th birthday. Ricky participated with three songs in Sing Along Golden Hits Encore Concert in 2004 among other stars. He appeared in the Rosanne in Starry Night Concert in March, 2006.
+
+Ricky is also a returning guest on Sam Hui's concerts singing a few songs on his own or duets with brother. He often participates in TV Game Shows as well.
+
+On July 30, 2006 Ricky appeared on concert in Jockey Club Auditorium, The Hong Kong Polytechnic University .
+Death [ edit ]
+
+Ricky Hui died of a heart attack at home on November 8, 2011 at the age of 65. [ 1 ]
+Filmography [ edit ]
+Year Title
+1972 A Girl Fighter
+The 14 Amazons
+The Lizard
+Man Of Iron
+Thunderbolt Fist
+1973 The Generation Gap
+Sinful Confession
+The House of 72 Tenants
+Illicit Desire
+The Iron Bodyguard
+Kiss of Death
+The Mandarin
+The Sugar Daddies
+The Delinquent
+1974 Games Gamblers Play
+The Ghost Lovers
+Hong Kong 73
+Kidnap
+Rivals Of Kung Fu
+Sex, Love And Hate
+1975 The Flying Guillotine
+The Last Message
+1976 Challenge Of The Masters
+The Private Eyes
+1977 Money Crazy
+1978 The Contract
+1979 From Riches To Rags
+1981 Security Unlimited
+1982 Plain Jane To The Rescue
+To Hell With The Devil
+1983 The Trail
+1984 Aces Go Places III: Our Man From Bond Street
+1985 Infatuation
+Mr. Vampire
+1986 Chocolate Inspector
+Naughty Boys '
+Happy Ding Dong '
+1987 The Haunted Cop Shop
+Project A Part II
+1988 Chicken and Duck Talk
+The Haunted Cop Shop 2
+The Inspector Wears Skirts
+Operation Pink Squad
+Stumbling Cops
+Who Is the Craftiest
+1989 Forever Young '
+How To Be A Millionaire... Without Really Trying
+The Inspector Wears Skirts 2
+Miracles
+Mr Coconut
+1990 Front Page
+1991 Ghost For Sales
+1992 The Magic Touch
+Mr. Vampire 1992
+1993 All's Well, Ends Well Too
+Laughter of "Water Margins"
+1997 First Love Unlimited
+2000 Winner Takes All
+2004 Forever Yours
+Super Model
+2005 Divergence
+
+[ 2 ] [ 3 ]
+References [ edit ]
+^ "許冠英心臟病逝世 享年65歲" . iHKtv (in Chinese). 8 November 2011 . Retrieved 8 November 2011 .  
+^ "Ricky Hui" . imdb.com . Retrieved April 2, 2010 .  
+^ "Ricky Hui" . chinesemov.com . Retrieved April 2, 2010 .  
+External links [ edit ]
+Ricky Hui at the Internet Movie Database
+Ricky Hui an Appreciation Site from Hungary
+Ricky Hui on Hong Kong Cinemagic
+Ricky Hui Forum
+Special topic on the English board of Hong Kong Cinemagic
+[1]
+Persondata
+Name Hui, Ricky
+Alternative names
+Short description
+Date of birth August 3, 1946
+Place of birth Panyu , Guangdong
+Date of death November 8, 2011
+Place of death Hong Kong
+Categories : 1946 births
+Hong Kong film actors
+2011 deaths
+People from Panyu
+Actors from Guangzhou
+Hidden categories: Articles containing traditional Chinese language text
+Articles containing simplified Chinese language text
+Persondata templates without short description parameter
+Navigation menu
+Personal tools
+Create account
+Log in
+Namespaces
+Article
+Talk
+Variants
+Views
+Read
+Edit
+View history
+Actions
+Search
+Navigation
+Main page
+Contents
+Featured content
+Current events
+Random article
+Donate to Wikipedia
+Interaction
+Help
+About Wikipedia
+Community portal
+Recent changes
+Contact Wikipedia
+Toolbox
+What links here
+Related changes
+Upload file
+Special pages
+Permanent link
+Page information
+Cite this page
+Print/export
+Create a book
+Download as PDF
+Printable version
+Languages
+Bân-lâm-gú
+Deutsch
+Bahasa Indonesia
+日本語
+ไทย
+Tiếng Việt
+文言
+粵語
+中文
+Edit links
+This page was last modified on 24 April 2013 at 03:43.
+
+Text is available under the Creative Commons Attribution-ShareAlike License ; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy.
+Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc. , a non-profit organization.
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Mobile view
+</string>
+              </entry>
+              <entry>
+                <string>encoding</string>
+                <string>windows-1251</string>
+              </entry>
+              <entry>
+                <string>sourceUrlStartOffset</string>
+                <null/>
+              </entry>
+              <entry>
+                <string>preserveOriginalContent</string>
+                <boolean>false</boolean>
+              </entry>
+              <entry>
+                <string>collectRepositioningInfo</string>
+                <boolean>false</boolean>
+              </entry>
+              <entry>
+                <string>sourceUrl</string>
+                <gate.util.persistence.PersistenceManager-URLHolder>
+                  <urlString>http://en.wikipedia.org/wiki/Ricky_Hui</urlString>
+                </gate.util.persistence.PersistenceManager-URLHolder>
+              </entry>
+              <entry>
+                <string>mimeType</string>
+                <null/>
+              </entry>
+              <entry>
+                <string>sourceUrlEndOffset</string>
+                <null/>
+              </entry>
+            </localMap>
+          </initParams>
+        </gate.util.persistence.LRPersistence>
+      </docList>
+      <resourceType>gate.corpora.CorpusImpl</resourceType>
+      <resourceName>Actors Articles</resourceName>
+      <initParams class="gate.util.persistence.MapPersistence">
+        <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+        <localMap>
+          <entry>
+            <string>documentsList</string>
+            <gate.util.persistence.CollectionPersistence>
+              <localList>
+                <gate.util.persistence.LRPersistence reference="../../../../../../docList/gate.util.persistence.LRPersistence"/>
+              </localList>
+              <collectionType>java.util.Arrays$ArrayList</collectionType>
+            </gate.util.persistence.CollectionPersistence>
+          </entry>
+        </localMap>
+      </initParams>
+    </corpus>
+    <prList class="gate.util.persistence.CollectionPersistence">
+      <localList>
+        <gate.util.persistence.PRPersistence>
+          <runtimeParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>setsToKeep</string>
+                <gate.util.persistence.CollectionPersistence>
+                  <localList/>
+                  <collectionType>java.util.ArrayList</collectionType>
+                </gate.util.persistence.CollectionPersistence>
+              </entry>
+              <entry>
+                <string>document</string>
+                <null/>
+              </entry>
+              <entry>
+                <string>annotationTypes</string>
+                <null/>
+              </entry>
+              <entry>
+                <string>keepOriginalMarkupsAS</string>
+                <boolean>true</boolean>
+              </entry>
+            </localMap>
+          </runtimeParams>
+          <resourceType>gate.creole.annotdelete.AnnotationDeletePR</resourceType>
+          <resourceName>Document Reset</resourceName>
+          <initParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap/>
+          </initParams>
+          <features class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap/>
+          </features>
+        </gate.util.persistence.PRPersistence>
+        <gate.util.persistence.LanguageAnalyserPersistence>
+          <runtimeParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>annotationSetName</string>
+                <null/>
+              </entry>
+              <entry>
+                <string>annotationLimit</string>
+                <int>0</int>
+              </entry>
+              <entry>
+                <string>document</string>
+                <null/>
+              </entry>
+            </localMap>
+          </runtimeParams>
+          <resourceType>com.ontotext.kim.gate.KimGazetteer</resourceType>
+          <resourceName>Entertainers Gazetteer</resourceName>
+          <initParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>forceCaseSensitive</string>
+                <boolean>false</boolean>
+              </entry>
+              <entry>
+                <string>dictionaryPath</string>
+                <gate.util.persistence.PersistenceManager-URLHolder>
+                  <urlString>$relpath$../dictionary_from_remote_repository</urlString>
+                </gate.util.persistence.PersistenceManager-URLHolder>
+              </entry>
+            </localMap>
+          </initParams>
+          <features class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap/>
+          </features>
+        </gate.util.persistence.LanguageAnalyserPersistence>
+        <gate.util.persistence.LanguageAnalyserPersistence>
+          <runtimeParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>deleteOnNoRelations</string>
+                <boolean>true</boolean>
+              </entry>
+              <entry>
+                <string>document</string>
+                <null/>
+              </entry>
+              <entry>
+                <string>annotationTypes</string>
+                <gate.util.persistence.CollectionPersistence>
+                  <localList>
+                    <string>Lookup</string>
+                  </localList>
+                  <collectionType>java.util.ArrayList</collectionType>
+                </gate.util.persistence.CollectionPersistence>
+              </entry>
+              <entry>
+                <string>inputASName</string>
+                <string></string>
+              </entry>
+              <entry>
+                <string>query</string>
+                <string>SELECT ?BirthPlace WHERE { &lt;%s&gt; &lt;http://dbpedia.org/ontology/birthPlace&gt; ?BirthPlace . } LIMIT 10</string>
+              </entry>
+            </localMap>
+          </runtimeParams>
+          <resourceType>com.ontotext.kim.gate.SesameEnrichment</resourceType>
+          <resourceName>LDSR Enrichment</resourceName>
+          <initParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>repositoryUrl</string>
+                <string>http://factforge.net/sparql</string>
+              </entry>
+              <entry>
+                <string>version</string>
+                <null/>
+              </entry>
+            </localMap>
+          </initParams>
+          <features class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap/>
+          </features>
+        </gate.util.persistence.LanguageAnalyserPersistence>
+      </localList>
+      <collectionType>java.util.ArrayList</collectionType>
+    </prList>
+    <resourceType>gate.creole.SerialAnalyserController</resourceType>
+    <resourceName>Movie-stars Pipeline</resourceName>
+    <initParams class="gate.util.persistence.MapPersistence">
+      <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+      <localMap/>
+    </initParams>
+    <features class="gate.util.persistence.MapPersistence">
+      <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+      <localMap/>
+    </features>
+  </application>
+</gate.util.persistence.GateApplication>

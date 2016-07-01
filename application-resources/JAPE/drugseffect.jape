@@ -1,0 +1,85 @@
+Phase: DrugseffectNeg
+Input: Lookup stopmatch egmatch Split
+Options: control = appelt
+
+Rule: drugsbefore
+(
+  {Lookup.majorType == "drug"}
+  ({Lookup})*
+  {Lookup.majorType == "druglink"}
+  ({Lookup})*
+  ({Lookup.majorType == "ADR"}):ADR
+
+
+):drugsbefore
+-->
+:drugsbefore{
+  AnnotationSet set= bindings.get("ADR");
+  for (Annotation ann : set){
+   ann.getFeatures().put("ignoreMe",Boolean.TRUE);
+   ann.getFeatures().put("rule", "drugsbefore");
+  }
+
+}
+Rule: drugsafter
+(
+  ({Lookup.majorType == "ADR"}):ADR
+  ({Lookup})*
+   {Lookup.majorType == "druglink"}
+  ({Lookup})*
+   {Lookup.majorType == "drug"}
+
+
+):drugsafter
+-->
+:drugsafter{
+  AnnotationSet set= bindings.get("ADR");
+  for (Annotation ann : set){
+   ann.getFeatures().put("ignoreMe",Boolean.TRUE);
+   ann.getFeatures().put("rule", "drugsafter");
+  }
+
+}
+Rule: stopbefore
+(
+  {stopmatch}
+  ({Lookup.majorType == "admin"})?
+  {Lookup.majorType == "drug"}
+  ({Lookup})*
+  {Lookup.majorType == "druglink"}
+  ({Lookup})*
+  ({Lookup.majorType == "ADR"}):ADR
+
+
+):stopbefore
+-->
+:stopbefore{
+  AnnotationSet set= bindings.get("ADR");
+  for (Annotation ann : set){
+   ann.getFeatures().put("ignoreMe",Boolean.TRUE);
+   ann.getFeatures().put("rule", "stopbefore");
+  }
+
+}
+Rule: drugegbefore
+(
+  {Lookup.majorType == "drug"}
+  ({Lookup})*
+  {egmatch}
+  (({Lookup})+):ADR
+
+
+):drugegbefore
+-->
+:drugegbefore{
+  AnnotationSet set= bindings.get("ADR");
+  for (Annotation ann : set){
+   String mt = ann.getFeatures().get("majorType").toString();
+   if(mt.equals("ADR") ){
+     ann.getFeatures().put("ignoreMe",Boolean.TRUE);
+     ann.getFeatures().put("rule", "stopbefore");
+   }
+  }
+
+}
+

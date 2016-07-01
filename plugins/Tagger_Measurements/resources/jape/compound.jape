@@ -1,0 +1,75 @@
+/*
+ * Copyright (c) 2009-2011, The University of Sheffield.
+ * 
+ * This file is part of GATE (see http://gate.ac.uk/), and is free software,
+ * Licensed under the GNU Library General Public License, Version 3, June 2007
+ * (in the distribution as file licence.html, and also available at
+ * http://gate.ac.uk/gate/licence.html).
+ */
+ 
+Phase: Compound
+
+Input: Number Token Measurement
+Options: control = appelt
+
+Rule:Compound
+Priority: 50
+(
+  ({Measurement}):measurement1
+  ({Measurement}):measurement2
+):compound
+-->
+{
+  try {
+    Annotation measurement1 = ((AnnotationSet)bindings.get("measurement1")).iterator().next();
+    Annotation measurement2 = ((AnnotationSet)bindings.get("measurement2")).iterator().next();
+    
+	String unit1 = (String)measurement1.getFeatures().get("normalizedUnit");
+	String unit2 = (String)measurement2.getFeatures().get("normalizedUnit");
+	
+	if (unit1 == null || unit2 == null) return;
+	
+	if (!unit1.equals(unit2)) return;
+	
+	String m2string = doc.getContent().getContent(measurement2.getStartNode().getOffset(),measurement2.getEndNode().getOffset()).toString();
+	
+	if (m2string.charAt(0) == '-') {
+	  //this isn't a compound but an interval where there is no space and so the - has been
+	  //interpreted as a minus sign attached to the number at the end of the range
+	  //what we need to do here is adjust the span of the second annotation so that the later
+	  //interval grammar will work correctly
+	  
+	  FeatureMap features = measurement2.getFeatures();
+	  if (features.containsKey("value")) features.put("value",Math.abs((Double)features.get("value")));
+	  features.put("normalizedValue",Math.abs((Double)features.get("normalizedValue")));
+	  features.put("normalized",features.get("normalizedValue")+" "+features.get("normalizedUnit"));
+	  features.put("rule","compound");
+	  
+	  outputAS.add(measurement2.getStartNode().getOffset()+1,measurement2.getEndNode().getOffset(),"Measurement", features);	  
+	  inputAS.remove(measurement2);
+	} else {
+	  AnnotationSet compound = (AnnotationSet)bindings.get("compound");
+	
+	  Double value1 = (Double)measurement1.getFeatures().get("normalizedValue");
+	  Double value2 = (Double)measurement2.getFeatures().get("normalizedValue");
+		
+	  FeatureMap features = Factory.newFeatureMap();	
+	  features.put("normalizedUnit", unit1);
+      features.put("normalizedValue", value1 + value2);
+      features.put("type","scalar");
+      features.put("rule","compound");
+    
+      String dimension = (String)measurement1.getFeatures().get("dimension");
+      if (dimension == null) dimension = (String)measurement2.getFeatures().get("dimension");
+      if (dimension != null) features.put("dimension", dimension);
+    
+      outputAS.add(compound.firstNode().getOffset(),compound.lastNode().getOffset(),"Measurement", features);
+
+	  inputAS.remove(measurement1);
+	  inputAS.remove(measurement2);
+	}
+  }
+  catch (Exception e) {
+    throw new NonFatalJapeException(e);
+  }
+}

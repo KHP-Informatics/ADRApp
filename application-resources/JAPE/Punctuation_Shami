@@ -1,0 +1,21 @@
+/*--Developed By Ehtesham Iqbal / Robbie Mallah ----*/ 
+/*--Email: Ehtesham.iqbal@kcl.ac.uk --------------------*/ 
+
+Phase: PUNCNegTest1
+Input: Lookup SpaceToken Token Split
+Options: control = appelt
+
+Rule: negbefore
+(
+  {Token.string=="?"}
+  ({Token}|{SpaceToken})[0,5]
+  ({Lookup.majorType == "ADR"}):ADR1
+
+):negbefore
+-->
+{
+System.out.println("hi");
+  AnnotationSet patSet= gate.Utils.getContainedAnnotations(  inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+gate.Annotation patAnn = (gate.Annotation)patSet.iterator().next();
+patAnn.getFeatures().put("Negation","negated");
+}

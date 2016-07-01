@@ -1,0 +1,477 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<GateDocument version="3">
+<!-- The document's features-->
+
+<GateDocumentFeatures>
+<Feature>
+  <Name className="java.lang.String">MatchesAnnots</Name>
+  <Value className="gate.corpora.ObjectWrapper"><![CDATA[<?xml version='1.0' encoding='UTF-8'?><gate.corpora.ObjectWrapper><value class="map"><entry><null/><list/></entry></value></gate.corpora.ObjectWrapper>]]></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">deleteNonNNPLookups</Name>
+  <Value className="java.lang.String">true</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">gate.SourceURL</Name>
+  <Value className="java.lang.String">file:/home/niraj/trendminer-sources/Data20092010/AFP_ENG_20070512.0425.LDC2009T13.sgm</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">lang</Name>
+  <Value className="java.lang.String">en</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">MimeType</Name>
+  <Value className="java.lang.String">text/sgml</Value>
+</Feature>
+</GateDocumentFeatures>
+<!-- The document content area with serialized nodes -->
+
+<TextWithNodes>
+ AFP_ENG_20070512.0425.LDC2009T13 
+ NEWS STORY 
+ 2007-05-12 
+
+
+Football: United's young generation excites Ferguson by Ian
+Whittell
+
+
+
+Manchester United manager Sir Alex Ferguson celebrates a ninth
+Premiership title on Sunday with a stark warning for his club's
+closest rivals.
+
+
+As the debate over where this latest championship success rates
+in the Scot's impressive list of achievements, the veteran
+manager is confident that, with so many key United players at the
+start of their careers, his current squad can only get better.
+
+
+"They are young enough," said Ferguson. "A lot of them are
+winning their first title and that must help them, give them
+confidence and a system of how to win the league.
+
+
+"For us, we had to change it this year, starting well and staying
+with it, showing the resilience of 29 weeks at the top of the
+league with someone breathing down your neck.
+
+
+"These are things that will help them and they are young enough
+to expect them to go only one way.
+
+
+"They are helped by the experience of (Paul) Scholes, (Ryan)
+Giggs, (Gary) Neville, (Ole Gunnar) Solskjaer and I think those
+people will be there for a couple of years at least."
+
+
+Seasoned Old Trafford watches reckon the team's form this season,
+and the precocious talent of Wayne Rooney and Cristiano Ronaldo
+in particular, means Ferguson's current squad could eclipse the
+1994 and 1999 United teams, considered among the greatest in the
+club's history.
+
+
+"Without question," said Ferguson, 65, of that possibility.
+"There have been indications, in certain types of games this
+season when we have had to battle through. Last Saturday, in the
+Manchester derby, was like that.
+
+
+"They found their energy to get through the game, win 1-0 and
+they defended with great courage in the last ten minutes of the
+match. That's a good guideline in terms of the best Manchester
+United teams.
+
+
+"Ability-wise? Yes, there is some excellent ability in the team,
+at some good ages. If this team can stay together for a few
+years, by doing that you develop friendships and become a
+stronger unit, so I expect them to improve."
+
+
+Giggs, Scholes, Neville and Solskjaer may all be entering the
+final stages of their careers but Ferguson has no short-term
+fears about losing such legendary United names.
+
+
+"Without a question, Ryan will play the next two years," said the
+manager. "He has looked after himself and has the type of
+physique that is good.
+
+
+"Quite remarkably, he has retained most of his pace, maybe he is
+not as greased lightning as he was as a 17-year-old but he is
+still quick enough.
+
+
+"Him and Paul Scholes, Gary Neville should be no problem for two
+more years at least, we have no immediate worries there.
+
+
+"And of course, Ole Gunnar Solskjaer is 34 but scored 11 goals
+this season. If he gives us another 11 next season, we will be
+dancing about it because that is another big contribution there."
+
+
+Sunday's match against West Ham at Old Trafford may represent the
+end of United's league campaign but there is one more important
+date left in the domestic campaign with Ferguson's men facing
+title-rivals Chelsea at the new Wembley Stadium in Saturday's FA
+Cup Final.
+
+
+"I think winning the FA Cup is a special event and, to me, the
+only way to enjoy Wembley is by winning," Ferguson explained.
+
+
+"They talk about the improving English game, with three teams
+making the semi- finals of <Node id="3373"/>the <Node id="3377"/>Champions<Node id="3386"/>' <Node id="3388"/>League<Node id="3394"/>,<Node id="3395"/> and I think the
+Premiership is probably the best in Europe.
+
+
+"This is an opportunity for both teams to give a display that
+shows the right two teams are playing at the new Wembley.
+
+
+"I see Chelsea as our main challengers next year. Arsenal are a
+young team, Liverpool will be adding to their squad, maybe
+Arsenal, too. But obviously Chelsea, with their resources, could
+rebuild another team."
+
+
+The Cup final also gives Ferguson the chance to claim the fourth
+league and cup double of his United reign after achieving the
+feat in 1994, 1996 and 1999, when they also lifted the European
+Cup for the second time in their history.
+
+
+"It has been harder for us this season with the injuries," said
+Ferguson. "Hopefully, next season we will have a stronger squad
+to cope with these things because it would be nice to get to
+another European final."
+
+
+
+</TextWithNodes>
+<!-- The default annotation set -->
+
+<AnnotationSet>
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="anniePerSet">
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="Key">
+<Annotation Id="6402" Type="Mention_disamb" StartNode="3388" EndNode="3395">
+<Feature>
+  <Name className="java.lang.String">structSimV2UniDirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2Combined</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">relUriFreqByLabelInWp</Name>
+  <Value className="java.lang.Double">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">allLabels</Name>
+  <Value className="java.lang.String">league,|northern union football|rugby league football|rugby 13|the greatest game|footy|the greatest game of all|league|rugby leauge|game of thirteen|rl football|rugby league|football in new south wales|rugby xiii|thirteen-a-side|rl|rakavi saumi|rugby|game of 13|rugby x111|grasso2008-07-28</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">origLabels</Name>
+  <Value className="java.lang.String">League,</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://dbpedia.org/resource/Rugby_league</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">labelUriFreqInWp</Name>
+  <Value className="java.lang.Integer">0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2BiIndirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">sources</Name>
+  <Value className="java.lang.String">dbp_nick</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">dbpSpecificClass</Name>
+  <Value className="java.lang.String">http://www.w3.org/2002/07/owl#Thing</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarityVector</Name>
+  <Value className="java.lang.Double">0.15988872025369089</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">stringSimilarityBestLabel</Name>
+  <Value className="java.lang.Float">0.5</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">labelFreqInWp</Name>
+  <Value className="java.lang.Integer">0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">airpSpecificClass</Name>
+  <Value className="java.lang.String">http://dbpedia.org/ontology/Sport</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarity</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">parenthesesInfo</Name>
+  <Value className="java.lang.String">NONE</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">dbpInterestingClass</Name>
+  <Value className="java.lang.String">http://www.w3.org/2002/07/owl#Thing</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">uriFreqInWp</Name>
+  <Value className="java.lang.Integer">9548</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarityLucene</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2SharedChild</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">wpPageId</Name>
+  <Value className="java.lang.Integer">25735</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">class</Name>
+  <Value className="java.lang.String">false</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2SharedParent</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">label</Name>
+  <Value className="java.lang.String">league,</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">redirInfo</Name>
+  <Value className="java.lang.String">dbp_name_property</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2BiDirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">airpInterestingClass</Name>
+  <Value className="java.lang.String">http://www.w3.org/2002/07/owl#Thing</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">disambInfo</Name>
+  <Value className="java.lang.String">dbp_name_property</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">relLabelFreqByUriInWp</Name>
+  <Value className="java.lang.Double">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2UniIndirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">allOrigLabels</Name>
+  <Value className="java.lang.String">League,|Grasso2008-07-28|Rugby league|Rugby League|Rugby 13|Northern union football|Northern Union football|The Greatest Game|Footy|League|Rugby leauge|Game of thirteen|Rl football|Football in New South Wales|Rugby XIII|Rugby League Football|Rugby league football|Thirteen-a-side|RL|Rakavi saumi|Rugby|Game of 13|Rugby X111|The greatest game of all|The Greatest Game of All</Value>
+</Feature>
+</Annotation>
+<Annotation Id="127" Type="Mention" StartNode="3377" EndNode="3394">
+<Feature>
+  <Name className="java.lang.String">entityId</Name>
+  <Value className="java.lang.String">E0023604</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">wikiUri</Name>
+  <Value className="java.lang.String">http://en.wikipedia.org/wiki/UEFA_Champions_League</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">majorType</Name>
+  <Value className="java.lang.String">entities</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">docId</Name>
+  <Value className="java.lang.String">AFP_ENG_20070512.0425.LDC2009T13</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">type</Name>
+  <Value className="java.lang.String">UKN</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://dbpedia.org/resource/UEFA_Champions_League</Value>
+</Feature>
+</Annotation>
+<Annotation Id="6408" Type="Mention_disamb" StartNode="3373" EndNode="3386">
+<Feature>
+  <Name className="java.lang.String">structSimV2UniDirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2Combined</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">relUriFreqByLabelInWp</Name>
+  <Value className="java.lang.Double">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">allLabels</Name>
+  <Value className="java.lang.String">the champions|icestar</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">origLabels</Name>
+  <Value className="java.lang.String">The Champions</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://dbpedia.org/resource/The_Champions_(Hero_Universe)</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">labelUriFreqInWp</Name>
+  <Value className="java.lang.Integer">0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2BiIndirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">sources</Name>
+  <Value className="java.lang.String">label</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">dbpSpecificClass</Name>
+  <Value className="java.lang.String"></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarityVector</Name>
+  <Value className="java.lang.Double">0.00702627243398471</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">stringSimilarityBestLabel</Name>
+  <Value className="java.lang.Float">0.5</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">labelFreqInWp</Name>
+  <Value className="java.lang.Integer">143</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">airpSpecificClass</Name>
+  <Value className="java.lang.String"></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarity</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">parenthesesInfo</Name>
+  <Value className="java.lang.String">Hero Universe</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">dbpInterestingClass</Name>
+  <Value className="java.lang.String"></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">uriFreqInWp</Name>
+  <Value className="java.lang.Integer">2</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarityLucene</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2SharedChild</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">wpPageId</Name>
+  <Value className="java.lang.Integer">14231581</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">class</Name>
+  <Value className="java.lang.String">false</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2SharedParent</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">label</Name>
+  <Value className="java.lang.String">the champions</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">redirInfo</Name>
+  <Value className="java.lang.String">nodisamb</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2BiDirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">airpInterestingClass</Name>
+  <Value className="java.lang.String"></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">disambInfo</Name>
+  <Value className="java.lang.String">nonredir</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">relLabelFreqByUriInWp</Name>
+  <Value className="java.lang.Double">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2UniIndirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">allOrigLabels</Name>
+  <Value className="java.lang.String">The Champions|Icestar</Value>
+</Feature>
+</Annotation>
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="GazetteerEN">
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="Mallet Output">
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="DEBUG_filterLookupsByPOS">
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="DEBUG_removeLookups">
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="Original markups">
+</AnnotationSet>
+
+</GateDocument>

@@ -1,0 +1,14 @@
+/*--Developed By Ehtesham Iqbal / Robbie Mallah ----*/ 
+/*--Email: Ehtesham.iqbal@kcl.ac.uk --------------------*/ 
+
+Phase: STOPMatch
+Input: Token SpaceToken
+Options: control = appelt
+
+Rule: stopmatch
+(
+ {Token.string == "stop"}
+):stopmatch
+-->
+ :stopmatch.stopmatch={}
+

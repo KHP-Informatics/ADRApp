@@ -1,0 +1,406 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<GateDocument version="3">
+<!-- The document's features-->
+
+<GateDocumentFeatures>
+<Feature>
+  <Name className="java.lang.String">MatchesAnnots</Name>
+  <Value className="gate.corpora.ObjectWrapper"><![CDATA[<?xml version='1.0' encoding='UTF-8'?><gate.corpora.ObjectWrapper><value class="map"><entry><null/><list/></entry></value></gate.corpora.ObjectWrapper>]]></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">deleteNonNNPLookups</Name>
+  <Value className="java.lang.String">true</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">gate.SourceURL</Name>
+  <Value className="java.lang.String">file:/home/niraj/trendminer-sources/Data20092010/AFP_ENG_20070318.0267.LDC2009T13.sgm</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">lang</Name>
+  <Value className="java.lang.String">en</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">MimeType</Name>
+  <Value className="java.lang.String">text/sgml</Value>
+</Feature>
+</GateDocumentFeatures>
+<!-- The document content area with serialized nodes -->
+
+<TextWithNodes>
+ AFP_ENG_20070318.0267.LDC2009T13 
+ NEWS STORY 
+ 2007-03-18 
+
+
+Football: Villa's slide continues after drab stalemate by John
+Percy
+
+
+
+Aston Villa limped to a dour 0-0 stalemate with Liverpool on
+Sunday that took Martin O'Neill's run to just two victories in 19
+matches, a sequence that leaves his team only seven points clear
+of the Premiership's relegation zone.
+
+
+Villa manager O'Neill has never suffered a more miserable
+sequence of results in management and is now facing the grim
+prospect of the words 'relegation battle' entering the vocabulary
+of his American owner Randy Lerner.
+
+
+Liverpool must surely be focusing on the Champions' League after
+failing to inspire in an instantly forgettable encounter at Villa
+Park, but the problems are far more serious, and continuing to
+pile up, for their opponents.
+
+
+After such a bright start to O'Neill's reign at Villa Park, the
+feelgood factor has long since evaporated and after Charlton's
+victory earlier on Sunday, he is now bracing himself for an
+excruciating end to the campaign.
+
+
+Fortune is also eluding the Ulsterman currently, with Villa's
+best chance of securing three vital points denied by referee Lee
+Mason after Steve Finnan clearly pushed Stilian Petrov inside the
+area.
+
+
+With second place in the Premiership almost certainly out of
+reach, Liverpool's focus for the remainder of the season is <Node id="1362"/>the
+<Node id="1366"/>Champions<Node id="1375"/>' <Node id="1377"/>League<Node id="1383"/> and that vital encounter with PSV Eindhoven to
+come next month.
+
+
+Their minds certainly looked to be elsewhere at Villa Park for
+most of the contest as they struggled to break down opponents for
+whom the end of the season cannot come quickly enough.
+
+
+O'Neill's side were third in mid-November but were in free-fall
+until mid- January when two victories stemmed the tide and this
+was another turgid first half display to add to Villa's season of
+troubles. Few chances were created by either side, with Gabriel
+Agbonlahor coming closest with two efforts blocked by Jamie
+Carragher and Daniel Agger.
+
+
+Five minutes before half-time, John Carew should have given Villa
+the lead when Ashley Young found him in the Liverpool penalty
+area but he was unable to direct his shot on target.
+
+
+O'Neill, a serial touchline prowler, was fidgeting with fury in
+injury-time after Mahon failed to award his team a penalty kick
+for a clear push on Petrov and it was not until the 58th minute
+that the manager saw his side carve out another opportunity with
+Swedish international defender Olof Mellberg tamely heading
+Young's free-kick straight at the Liverpool goalkeeper Jose
+Reina.
+
+
+There was little to provide O'Neill with optimism, with his eye
+on the remainder of the campaign, with substitute Patrik Berger
+flashing a shot horribly wide into the stands as the tension
+among the home supporters became tangible.
+
+
+At the other end, O'Neill had to rely on his Danish goalkeeper
+Thomas Sorensen to secure even the solitary point and avoid a
+potentially disastrous defeat as he made a superb stop to keep
+out a header from veteran Liverpool striker Robbie Fowler in the
+closing minutes.
+
+
+
+</TextWithNodes>
+<!-- The default annotation set -->
+
+<AnnotationSet>
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="Key">
+<Annotation Id="5626" Type="Mention_disamb" StartNode="1362" EndNode="1375">
+<Feature>
+  <Name className="java.lang.String">structSimV2UniDirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2Combined</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">relUriFreqByLabelInWp</Name>
+  <Value className="java.lang.Double">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">allLabels</Name>
+  <Value className="java.lang.String">champion|boh ngau|the champions|boh|(the</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">origLabels</Name>
+  <Value className="java.lang.String">The Champions</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://dbpedia.org/resource/Boh_Ngau</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">labelUriFreqInWp</Name>
+  <Value className="java.lang.Integer">0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2BiIndirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">sources</Name>
+  <Value className="java.lang.String">label</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">dbpSpecificClass</Name>
+  <Value className="java.lang.String"></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarityVector</Name>
+  <Value className="java.lang.Double">0.00992131860967201</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">stringSimilarityBestLabel</Name>
+  <Value className="java.lang.Float">0.5</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">labelFreqInWp</Name>
+  <Value className="java.lang.Integer">143</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">airpSpecificClass</Name>
+  <Value className="java.lang.String">http://dbpedia.org/ontology/Film</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarity</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">parenthesesInfo</Name>
+  <Value className="java.lang.String">1983 film|1985 film</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">dbpInterestingClass</Name>
+  <Value className="java.lang.String"></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">uriFreqInWp</Name>
+  <Value className="java.lang.Integer">0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarityLucene</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2SharedChild</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">wpPageId</Name>
+  <Value className="java.lang.Integer">37284986</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">class</Name>
+  <Value className="java.lang.String">false</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2SharedParent</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">label</Name>
+  <Value className="java.lang.String">the champions</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">redirInfo</Name>
+  <Value className="java.lang.String">nodisamb</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2BiDirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">airpInterestingClass</Name>
+  <Value className="java.lang.String">http://www.w3.org/2002/07/owl#Thing</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">disambInfo</Name>
+  <Value className="java.lang.String">redir</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">relLabelFreqByUriInWp</Name>
+  <Value className="java.lang.Double">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2UniIndirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">allOrigLabels</Name>
+  <Value className="java.lang.String">Champion|Boh Ngau|The Champions|Boh|(The</Value>
+</Feature>
+</Annotation>
+<Annotation Id="5592" Type="Mention_disamb" StartNode="1377" EndNode="1383">
+<Feature>
+  <Name className="java.lang.String">structSimV2UniDirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2Combined</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">relUriFreqByLabelInWp</Name>
+  <Value className="java.lang.Double">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">allLabels</Name>
+  <Value className="java.lang.String">league of european research universities|leru|e-leru|league</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">origLabels</Name>
+  <Value className="java.lang.String">League</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://dbpedia.org/resource/League_of_European_Research_Universities</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">labelUriFreqInWp</Name>
+  <Value className="java.lang.Integer">0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2BiIndirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">sources</Name>
+  <Value className="java.lang.String">dbp_name</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">dbpSpecificClass</Name>
+  <Value className="java.lang.String">http://dbpedia.org/ontology/Organisation</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarityVector</Name>
+  <Value className="java.lang.Double">0.0034753110229031052</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">stringSimilarityBestLabel</Name>
+  <Value className="java.lang.Float">0.5</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">labelFreqInWp</Name>
+  <Value className="java.lang.Integer">3049</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">airpSpecificClass</Name>
+  <Value className="java.lang.String">http://dbpedia.org/ontology/Organisation</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarity</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">parenthesesInfo</Name>
+  <Value className="java.lang.String">NONE</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">dbpInterestingClass</Name>
+  <Value className="java.lang.String">http://dbpedia.org/ontology/Organisation</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">uriFreqInWp</Name>
+  <Value className="java.lang.Integer">38</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarityLucene</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2SharedChild</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">wpPageId</Name>
+  <Value className="java.lang.Integer">722685</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">class</Name>
+  <Value className="java.lang.String">false</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2SharedParent</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">label</Name>
+  <Value className="java.lang.String">league</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">redirInfo</Name>
+  <Value className="java.lang.String">dbp_name_property</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2BiDirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">airpInterestingClass</Name>
+  <Value className="java.lang.String">http://dbpedia.org/ontology/Organisation</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">disambInfo</Name>
+  <Value className="java.lang.String">dbp_name_property</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">relLabelFreqByUriInWp</Name>
+  <Value className="java.lang.Double">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2UniIndirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">allOrigLabels</Name>
+  <Value className="java.lang.String">League of European Research Universities|LERU|E-LERU|League</Value>
+</Feature>
+</Annotation>
+<Annotation Id="227" Type="Mention" StartNode="1366" EndNode="1383">
+<Feature>
+  <Name className="java.lang.String">entityId</Name>
+  <Value className="java.lang.String">E0023604</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">wikiUri</Name>
+  <Value className="java.lang.String">http://en.wikipedia.org/wiki/UEFA_Champions_League</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">majorType</Name>
+  <Value className="java.lang.String">entities</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">docId</Name>
+  <Value className="java.lang.String">AFP_ENG_20070318.0267.LDC2009T13</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">type</Name>
+  <Value className="java.lang.String">UKN</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://dbpedia.org/resource/UEFA_Champions_League</Value>
+</Feature>
+</Annotation>
+</AnnotationSet>
+
+</GateDocument>

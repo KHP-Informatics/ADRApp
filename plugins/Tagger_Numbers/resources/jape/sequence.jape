@@ -1,0 +1,79 @@
+/*
+ * Copyright (c) 2011, The University of Sheffield.
+ * 
+ * This file is part of GATE (see http://gate.ac.uk/), and is free software,
+ * licenced under the GNU Library General Public License, Version 3, June 2007
+ * (in the distribution as file licence.html, and also available at
+ * http://gate.ac.uk/gate/licence.html).
+ */
+ 
+Imports: {
+  import static gate.creole.numbers.AnnotationConstants.HINT_FEATURE_NAME;
+  import static gate.creole.numbers.AnnotationConstants.NUMBER_ANNOTATION_NAME;
+  import static gate.creole.numbers.AnnotationConstants.TYPE_FEATURE_NAME;
+  import static gate.creole.numbers.AnnotationConstants.VALUE_FEATURE_NAME;
+}
+
+Phase: Sequence
+
+Input: Token Number Split
+Options: control = appelt
+
+Rule: Sequence1
+(
+  {Number.type == "numbers", Number.hint != "sup", Number.value >= 1d}
+  {Number.type == "numbers", Number.hint != "sup", Number.value < 1d}
+):sequence
+-->
+{  
+  AnnotationSet numbers = bindings.get("sequence");
+
+  FeatureMap features = Factory.newFeatureMap();
+  features.put(TYPE_FEATURE_NAME, "numbers");
+
+  double value = 0;
+  
+  for (Annotation number : numbers) {
+    value += (Double)number.getFeatures().get(VALUE_FEATURE_NAME);
+  }
+  
+  features.put(VALUE_FEATURE_NAME, value);
+	
+  try {
+    outputAS.add(numbers.firstNode().getOffset(), numbers.lastNode().getOffset(), NUMBER_ANNOTATION_NAME, features);
+  } catch(InvalidOffsetException ioe){
+    throw new LuckyException(ioe);
+  }
+  
+  inputAS.removeAll(numbers);
+}
+
+Rule: Sequence2
+(
+  {Number.type == "numbers", Number.hint == "sup", Number.value >= 1d}
+  {Number.type == "numbers", Number.hint == "sup", Number.value < 1d}
+):sequence
+-->
+{  
+  AnnotationSet numbers = bindings.get("sequence");
+
+  FeatureMap features = Factory.newFeatureMap();
+  features.put(TYPE_FEATURE_NAME, "numbers");
+
+  double value = 0;
+  
+  for (Annotation number : numbers) {
+    value += (Double)number.getFeatures().get(VALUE_FEATURE_NAME);
+  }
+  
+  features.put(VALUE_FEATURE_NAME, value);
+  features.put(HINT_FEATURE_NAME, "sup");
+	
+  try {
+    outputAS.add(numbers.firstNode().getOffset(), numbers.lastNode().getOffset(), NUMBER_ANNOTATION_NAME, features);
+  } catch(InvalidOffsetException ioe){
+    throw new LuckyException(ioe);
+  }
+  
+  inputAS.removeAll(numbers);
+}

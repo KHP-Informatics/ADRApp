@@ -1,0 +1,30 @@
+Notes on the GATE ConText PR and application
+============================================
+
+The PR was implemented from descriptions of the ConText algorithm on the web
+and in the literature, re-using terms and pseudo terms from the GenContext
+implementation of ConText.
+
+You can test the application using the gold standard data provided with
+GenContext, in tests/rsAnnotations-1-120-random.txt
+
+The output of GenContext for this test set can be found in
+docs/GenContext-output.txt
+
+The output for GenContext and GATE combined for comparison can be found in
+docs/GATE-and-GenContext-compared.xls
+
+There are a few differences between the values used in the gold standard,
+these are obvious. For example, GATE and GenContext use "Hypothetical as a
+value for temporality, whereas the gold standard uses "Not particular"
+
+The value "?" in the GATE results columns of
+docs/GATE-and-GenContext-compared.xls means that GATE did not detect anything
+for this input.In some cases, GATE failed because the condition noted in the
+gold standard was longer than the sentence from which it was found. In other
+cases of "?", the gazetteer used to simulate conditions for testing failed to
+detect the condition.
+
+The differences in results between the GenContext and GATE implementation of
+the algorithm are most likely due to (a) differences in lists of e.g. negations, pseudo
+experiencers and (b) differences in the quality of the tokenisation.

@@ -1,0 +1,45 @@
+Phase: Un_negate
+Input: Lookup Token Split
+Options: control = first
+
+Rule: thebefore
+(
+  {Token.string == "the"}
+  ({Token})?
+  ({Lookup.majorType == "ADR"}):ADR
+
+)
+-->
+:ADR{
+  AnnotationSet set= bindings.get("ADR");
+  for (Annotation ann : set){
+   ann.getFeatures().remove("ignoreMe");
+   ann.getFeatures().put("Unnegated", "Thebefore");
+  }
+}
+
+Rule: theorbefore
+(
+  {Token.string == "the"}
+  ({Token})?
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Token.string == "or"}
+  ({Lookup.majorType == "ADR"}):ADR2
+
+)
+-->
+:ADR1{
+  AnnotationSet set= bindings.get("ADR");
+  for (Annotation ann : set){
+   ann.getFeatures().remove("ignoreMe");
+   ann.getFeatures().put("Unnegated", "Theorbefore");
+  }
+},
+:ADR2{
+  AnnotationSet set= bindings.get("ADR");
+  for (Annotation ann : set){
+   ann.getFeatures().remove("ignoreMe");
+   ann.getFeatures().put("Unnegated", "Theorbefore");
+  }
+}
+

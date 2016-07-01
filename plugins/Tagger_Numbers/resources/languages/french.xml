@@ -1,0 +1,53 @@
+<config>
+  <description>French</description>
+  <words>
+    <word value="30.0">trente</word>
+    <word value="40.0">quarante</word>
+    <word value="0.0">zéro</word>
+    <word value="16.0">seize</word>
+    <word value="10.0">dix</word>
+    <word value="0.0">zero</word>
+    <word value="6.0">six</word>
+    <word value="20.0">vingt</word>
+    <word value="5.0">cinq</word>
+    <word value="60.0">soixante</word>
+    <word value="7.0">sept</word>
+    <word value="3.0">trois</word>
+    <word value="13.0">treize</word>
+    <word value="70.0">soixante-dix</word>
+    <word value="14.0">quatorze</word>
+    <word value="8.0">huit</word>
+    <word value="80.0">quatre-vingt</word>
+    <word value="4.0">quatre</word>
+    <word value="50.0">cinquante</word>
+    <word value="1.0">un</word>
+    <word value="15.0">quinze</word>
+    <word value="11.0">onze</word>
+    <word value="2.0">deux</word>
+    <word value="12.0">douze</word>
+    <word value="9.0">neuf</word>
+    <word value="80.0">quatre-vingts</word>
+  </words>
+  <multipliers>
+    <word value="2.0">cent</word>
+    <word value="24.0">quadrillions</word>
+    <word value="6.0">million</word>
+    <word value="18.0">trillions</word>
+    <word value="2.0">cents</word>
+    <word value="18.0">trillion</word>
+    <word value="15.0">billiard</word>
+    <word value="9.0">milliard</word>
+    <word value="12.0">billion</word>
+    <word value="21.0">trilliard</word>
+    <word value="9.0">milliards</word>
+    <word value="21.0">trilliards</word>
+    <word value="3.0">mille</word>
+    <word value="15.0">billiards</word>
+    <word value="24.0">quadrillion</word>
+    <word value="12.0">billions</word>
+    <word value="6.0">millions</word>
+  </multipliers>
+  <conjunctions>
+    <word whole="true">et</word>
+  </conjunctions>
+</config>

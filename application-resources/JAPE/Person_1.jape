@@ -1,0 +1,62 @@
+Phase: OtherPeople
+Input: Lookup Split
+Options: control = first
+
+Rule: personbefore
+( 
+  {Lookup.majorType == "Person"}
+  ({Lookup.majorType == "ADR"}):ADR
+):personbefore
+-->
+:personbefore{
+  AnnotationSet set= bindings.get("ADR");
+  for (Annotation ann : set){
+   ann.getFeatures().put("ignoreMe",Boolean.TRUE);
+   ann.getFeatures().put("rule", "personbefore");
+  }
+
+} 
+
+Rule: personafter
+(
+  ({Lookup.majorType=="ADR"}):ADR
+  {Lookup.majorType=="Person"}
+):personafter
+-->
+:personafter{
+  AnnotationSet set= bindings.get("ADR");
+  for (Annotation ann : set){
+   ann.getFeatures().put("ignoreMe",Boolean.TRUE);
+   ann.getFeatures().put("rule", "personafter");
+ }
+}
+
+Rule: Person1
+( {Lookup.majorType == "your"}
+  {Lookup.majorType == "Person"}
+  ({Lookup.majorType == "ADR"}):ADR
+):person1
+-->
+:person1{
+  AnnotationSet set= bindings.get("ADR");
+  for (Annotation ann : set){
+   ann.getFeatures().put("ignoreMe",Boolean.TRUE);
+   ann.getFeatures().put("rule", "Person1");
+  }
+
+} 
+
+Rule: Person2
+(
+  ({Lookup.majorType=="ADR"}):ADR
+  {Lookup.majorType == "Your"}
+  {Lookup.majorType=="Person"}
+):Person2
+-->
+:Person2{
+  AnnotationSet set= bindings.get("ADR");
+  for (Annotation ann : set){
+   ann.getFeatures().put("ignoreMe",Boolean.TRUE);
+   ann.getFeatures().put("rule", "Person2");
+ }
+}

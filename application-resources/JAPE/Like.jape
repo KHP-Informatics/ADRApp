@@ -1,0 +1,18 @@
+Phase: LIKENegTest2
+Input: Lookup Token Split
+Options: control = appelt
+
+Rule: likeafter
+(
+  ({Lookup.majorType=="ADR"}):ADR
+  {Lookup.majorType=="like"}
+):likeafter
+-->
+:ADR{
+  AnnotationSet set= bindings.get("ADR");
+  for (Annotation ann : set){
+   ann.getFeatures().put("ignoreMe",Boolean.TRUE);
+   ann.getFeatures().put("rule", "likeafter");
+  }
+
+}

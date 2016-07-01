@@ -1,0 +1,78 @@
+/*
+Phase:rename
+Input: ManualAnnotation
+Options: control = appelt
+Rule: Positive
+(
+{ManualAnnotation.observation == "Yes"}
+): pos
+-->
+:pos.ADR ={ADE_Status= "Yes" }
+
+Rule: Negative
+(
+{ManualAnnotation.observation == "No"}
+): neg
+-->
+:neg.ADR ={ADE_Status= "No" }
+*/
+//////////////////////////////////////////////////////////////////////////////////////////
+/*
+Phase:rename
+Input: Dystonia
+Options: control = appelt
+Rule: Positive
+(
+{Dystonia.Dystonia == "Yes"}
+): pos
+-->
+:pos.ADR ={ADE_Status= "Yes" }
+
+Rule: Negative
+(
+{Dystonia.Dystonia == "No"}
+): neg
+-->
+:neg.ADR ={ADE_Status= "No" }
+*/
+////////////////////////////////////////////////////////////////////////////////////////////
+
+Phase:rename
+Input: ManualAnnotation
+Options: control = appelt
+Rule: Positive
+(
+{ManualAnnotation.observation == "Yes"}
+): pos
+-->
+:pos.ADR ={ADR= "Yes" }
+
+Rule: Negative
+(
+{ManualAnnotation.observation == "No"}
+): neg
+-->
+:neg.ADR ={ADR= "No" }
+
+//////////////////////////////////////////////////////////////////////////////////////////
+/*
+
+Phase:rename
+Input: Dystonia
+Options: control = appelt
+Rule: Positive
+(
+{Dystonia.Dystonia == "Yes"}
+): pos
+-->
+:pos.ADR ={ADR= "Yes" }
+
+Rule: Negative
+(
+{Dystonia.Dystonia == "No"}
+): neg
+-->
+:neg.ADR ={ADR= "No" } 
+
+
+*/

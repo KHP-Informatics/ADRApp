@@ -1,0 +1,235 @@
+/*--Developed By Ehtesham Iqbal / Robbie Mallah ----*/ 
+/*--Email: Ehtesham.iqbal@kcl.ac.uk --------------------*/ 
+
+Phase: NegSeffects
+Input: Lookup Token Split
+Options: control = appelt
+
+
+/*********************************************/
+Rule: negseffects
+(
+  {Lookup.majorType == "negseffects"}
+  ({Token})[0,20]
+  {Token.root == "include"}
+  ({Token}|{Lookup})[0,20]
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+):negseffects
+-->
+:negseffects
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			   
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","NegsEffect");
+			} 
+			
+		}
+	}
+
+/*********************************************/
+
+Rule: negseffectsII
+(
+  {Token.root=="explain"}
+  ({Token}|{Lookup})[0,20]
+  ({Lookup.majorType=="negseffects"})
+  ({Token}|{Lookup})[0,20]
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+
+
+):negseffectsII
+-->
+:negseffectsII
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			  
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","NegsEffect2");
+			} 
+			
+		}
+	}
+
+/*********************************************/
+
+Rule: negseffectsIII
+(
+  {Token.root=="potential"}
+  ({Token}|{Lookup})[0,20]
+  ({Lookup.majorType=="negseffects"})
+  ({Token}|{Lookup})[0,20]
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+):negseffectsIII
+-->
+:negseffectsIII
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			   
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","NegsEffect3");
+			} 
+			
+		}
+	}
+
+/*********************************************/
+
+Rule: negseffectsIIII
+(
+  {Token.root=="disadvantage"}
+  ({Token}|{Lookup})[0,20]
+  ({Lookup.majorType=="negseffects"})
+  ({Token}|{Lookup})[0,20]
+  ({Lookup.majorType == "ADR"}):ADR1
+   {Split}
+):negseffectsIIII
+-->
+:negseffectsIIII
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			   
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","NegsEffect4");
+			} 
+			
+		}
+	}
+
+/*********************************************/
+
+Rule: negseffectsV
+(
+  {Lookup.majorType == "negseffects"}
+  ({Token})[0,20]
+  {Token.string == "such"}
+  ({Token}|{Lookup})[0,20]
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+):negseffectsV
+-->
+:negseffectsV
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			  
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","NegsEffect5");
+			} 
+			
+		}
+	}
+/*********************************************/
+
+Rule: negseffectsVI
+(
+  {Token.root=="inform"}
+  ({Token}|{Lookup})[0,20]
+  ({Lookup.majorType=="negseffects"})
+  ({Token}|{Lookup})[0,20]
+  ({Lookup.majorType == "ADR"}):ADR1
+   {Split}
+):negseffectsVI
+-->
+:negseffectsVI
+		{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			    
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","NegsEffect6");
+			} 
+			
+		}
+	}
+/*********************************************/
+
+Rule: negseffectsVII
+(
+  {Token.root == "common"}
+  ({Token}|{Lookup})[0,20]
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+):negseffectsVII
+-->
+:negseffectsVII
+		{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			   
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","NegsEffect7");
+			} 
+			
+		}
+	}
+/*********************************************/
+
+Rule: negseffectsIX
+(
+  {Lookup.majorType == "negseffects"}
+  ({Token})[0,20]
+  {Token.root == "explain"}
+  ({Token}|{Lookup})[0,20]
+  ({Lookup.majorType == "ADR"}):ADR1
+  {Split}
+
+):negseffectsIX
+-->
+:negseffectsIX
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			   
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","NegsEffect9");
+			} 
+		}
+	}

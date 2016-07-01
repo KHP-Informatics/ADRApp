@@ -1,0 +1,21 @@
+Phase: TitleNeg
+Input: Lookup Token Split SpaceToken
+Options: control = first
+
+Rule: titlebefore
+(
+  {Lookup.majorType == "title"}
+  ({Token.kind == "punctuation"}|{SpaceToken})[0,2]
+  ({Lookup.majorType == "ADR"}):ADR
+):titlebefore
+-->
+:titlebefore{
+  AnnotationSet set= bindings.get("ADR");
+  for (Annotation ann : set){
+   ann.getFeatures().put("ignoreMe",Boolean.TRUE);
+   ann.getFeatures().put("rule", "titlebefore");
+  }
+
+}
+
+

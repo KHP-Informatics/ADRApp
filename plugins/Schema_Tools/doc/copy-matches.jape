@@ -1,0 +1,51 @@
+/**
+ * This JAPE rule is an example showing how easy it is to copy a feature from
+ * one annotation set to another that cannot be defined by a schema and so
+ * cannot be copied by the Schema Enforcer PR. In this example the matches
+ * feature created by the Orthomatcher is being copied from Organization,
+ * Person and Location annotations in the input annotation set to the cleaned
+ * annotations, created by the Schema Enforcer, which are in the output
+ * annotation set.
+ *
+ * Copyright (c) 2011, The University of Sheffield.
+ *
+ * This file is part of GATE (see http://gate.ac.uk/), and is free software,
+ * licenced under the GNU Library General Public License, Version 2, June 1991
+ * (in the distribution as file licence.html, and also available at
+ * http://gate.ac.uk/gate/licence.html).
+ *
+ * Mark A. Greenwood, 23/01/2011
+ **/
+
+Phase: CopyMatches
+Input: Organization Person Location
+Options: control = all
+
+Rule: copy
+(
+   ({Organization}|{Person}|{Location}):entity
+)
+-->
+{
+	//get the annotation that has been matched from the binding set
+	Annotation inEntity = bindings.get("entity").iterator().next();
+
+	//get the matches feature
+	Object matches = inEntity.getFeatures().get("matches");
+
+	//if there isn't a matches feature then stop as there is nothing to do
+	if (matches == null) return;
+
+	//get the ID of the annotation the rule has matched
+	int id = inEntity.getId();
+
+	//get the same annotation from the output set
+	Annotation outEntity = outputAS.get(id);
+
+	//if there is no annotation (i.e. it didn't match the schema in
+	//some way) then stop as there is nothing to do
+	if (outEntity == null) return;
+
+	//add the matches feature to the output annotation
+	outEntity.getFeatures().put("matches", matches);
+}

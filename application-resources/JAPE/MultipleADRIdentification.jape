@@ -1,0 +1,132 @@
+/*--Developed By Ehtesham Iqbal / Robbie Mallah ----*/ 
+/*--Email: Ehtesham.iqbal@kcl.ac.uk --------------------*/ 
+
+Phase: MultipleADRIdentification
+Input: Lookup Token ADRGeneralDiscussion bnfmatch spcmatch Split
+Options: control = appelt
+
+Rule: MultipleADR
+(   
+	(({ADRGeneralDiscussion})+):ADR1
+):multipleadr
+-->
+:multipleadr
+   {
+      
+      if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+      {   
+         
+         AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+         for(Annotation annot : patSet) 
+         {   
+          
+            annot.getFeatures().put("Negation","Negated");
+            annot.getFeatures().put("JAPERule","MultipleADR");
+         } 
+ 
+      }
+   }
+/******************************************/
+
+Rule: BNFADRbefore
+(   
+	{Token.string == "BNF"}
+	({Token})[0,20]
+	({Lookup.majorType == "ADR"}):ADR1
+	
+):bnfadrbefore
+-->
+:bnfadrbefore
+   {
+      
+      if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+      {   
+         
+         AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+         for(Annotation annot : patSet) 
+         {   
+           
+            annot.getFeatures().put("Negation","Negated");
+            annot.getFeatures().put("JAPERule","BNFthenADR");
+         } 
+ 
+      }
+   }
+/******************************************/
+
+Rule: BNFADRafter
+(   
+	({Lookup.majorType == "ADR"}):ADR1
+	({Token})[0,20]
+	{Token.string == "BNF"}
+):bnfadrafter
+-->
+:bnfadrafter
+   {
+      
+      if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+      {   
+         AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+ 	 for(Annotation annot : patSet) 
+         {   
+            
+            annot.getFeatures().put("Negation","Negated");
+            annot.getFeatures().put("JAPERule","ADRthenBNF");
+         } 
+ 
+      }
+   }
+/******************************************/
+
+/******************************************/
+
+Rule: SPCADRbefore
+(   
+	{Token.string == "SPC"}
+	({Token})[0,20]
+	({Lookup.majorType == "ADR"}):ADR1
+	
+):spcadrbefore
+-->
+:spcadrbefore
+   {
+      
+      if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+      {   
+        
+         AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+         for(Annotation annot : patSet) 
+         {   
+            
+            annot.getFeatures().put("Negation","Negated");
+            annot.getFeatures().put("JAPERule","SPCthenADR");
+         } 
+ 
+      }
+   }
+
+/******************************************/
+
+Rule: SPCADRafter
+(   
+	({Lookup.majorType == "ADR"}):ADR1
+	({Token})[0,20]
+	{Token.string == "SPC"}
+):spcadrafter
+-->
+:spcadrafter
+   {
+     
+      if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+      {   
+         
+         AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+         for(Annotation annot : patSet) 
+         {   
+            annot.getFeatures().put("Negation","Negated");
+            annot.getFeatures().put("JAPERule","ADRthenSPC");
+         } 
+ 
+      }
+   }
+/******************************************/

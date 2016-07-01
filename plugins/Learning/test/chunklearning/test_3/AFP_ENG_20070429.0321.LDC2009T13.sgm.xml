@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<GateDocument version="3">
+<!-- The document's features-->
+
+<GateDocumentFeatures>
+<Feature>
+  <Name className="java.lang.String">MatchesAnnots</Name>
+  <Value className="gate.corpora.ObjectWrapper"><![CDATA[<?xml version='1.0' encoding='UTF-8'?><gate.corpora.ObjectWrapper><value class="map"><entry><null/><list/></entry></value></gate.corpora.ObjectWrapper>]]></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">deleteNonNNPLookups</Name>
+  <Value className="java.lang.String">true</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">gate.SourceURL</Name>
+  <Value className="java.lang.String">file:/home/niraj/trendminer-sources/Data20092010/AFP_ENG_20070429.0321.LDC2009T13.sgm</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">lang</Name>
+  <Value className="java.lang.String">en</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">MimeType</Name>
+  <Value className="java.lang.String">text/sgml</Value>
+</Feature>
+</GateDocumentFeatures>
+<!-- The document content area with serialized nodes -->
+
+<TextWithNodes>
+ AFP_ENG_20070429.0321.LDC2009T13 
+ NEWS STORY 
+ 2007-04-29 
+
+
+Report says Australian business benefits from helping Asia's poor
+by Neil Sands
+
+
+
+A report commissioned by some of Australia's leading companies
+argues there is a strong business case for private enterprise
+here to help alleviate poverty in the Asia-Pacific region.
+
+
+The report says helping overcome poverty in the world's fastest-
+growing economic region could improve the long-term bottom line
+of Australian companies, as well as addressing humanitarian
+issues.
+
+
+The report, commissioned by a World Vision-backed group called
+the Business for Poverty Relief Alliance, said Australian
+business could help bring stability to the region, creating new
+markets for its products in the process.
+
+
+It also warned Australian companies must carefully source
+materials and services in the Asia-Pacific region to avoid the
+"sweat-shop" controversies that have plagued major sportswear and
+retailing multinationals.
+
+
+The recently-formed business alliance involves major Australian
+companies such as ANZ Bank, Grey Global Group, <Node id="1086"/>IAG<Node id="1089"/>, Pfizer and
+Visy Industries.
+
+
+It commissioned the report from Melbourne-based private
+enterprise policy group Allen Consulting to examine the pros and
+cons of companies becoming involved in attempts to reduce
+poverty, particularly in the Asia-Pacific area.
+
+
+The conclusion was that companies in one of the region's richest
+economies had much to gain by promoting development among their
+neighbours.
+
+
+"There is a strong business case for Australian companies to
+focus on, and to do more to address, the plight of the poor in
+developing nations," the report concluded.
+
+
+"Global poverty represents a direct threat to the current and
+future prosperity of a range of Australian businesses through
+loss of potential markets, damage to foreign affiliates and a
+greater risk of regional instability.
+
+
+"In addition, contributing to the development of poor countries
+by generating income, creating jobs and investing in local
+businesses and skills can present Australian firms with the
+opportunities of new markets."
+
+
+The report found few Australian firms were acting to tackle
+poverty in their closest export markets, even though more than 25
+percent of the nation's trade was with low-income countries such
+as China, Thailand, India, Indonesia.
+
+
+"Australia's island geography creates an illusion of isolation
+from the world's poor," it said.
+
+
+"In fact, the opposite is true -- as an island nation, Australia
+is highly integrated with the world economy, including numerous
+developing countries."
+
+
+World Vision Australia chief executive Tim Costello said
+corporate Australia needed to be more socially aware and follow
+the example set by some of America's business leaders.
+
+
+"In the US, the work of Bill Gates and Warren Buffett has made
+corporations aware of how fundamental it is for them to be
+involved," he said.
+
+
+The report called for Australian companies to increase investment
+in poverty relief initiatives, ensure Asian workers were not
+exploited and lobby for Canberra to increase its international
+aid program.
+
+
+It also said the Asia-Pacific Economic Cooperation (APEC)
+leaders' summit in Sydney in September provided an excellent
+opportunity for business leaders to encourage governments to
+address the issue of poverty reduction.
+
+
+
+</TextWithNodes>
+<!-- The default annotation set -->
+
+<AnnotationSet>
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="Key">
+<Annotation Id="8900" Type="Mention_disamb" StartNode="1086" EndNode="1089">
+<Feature>
+  <Name className="java.lang.String">structSimV2UniDirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2Combined</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">relUriFreqByLabelInWp</Name>
+  <Value className="java.lang.Double">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">allLabels</Name>
+  <Value className="java.lang.String">iag</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">origLabels</Name>
+  <Value className="java.lang.String">IAG</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://dbpedia.org/resource/International_Adventure_Group</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">labelUriFreqInWp</Name>
+  <Value className="java.lang.Integer">0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2BiIndirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">sources</Name>
+  <Value className="java.lang.String">label</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">dbpSpecificClass</Name>
+  <Value className="java.lang.String"></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarityVector</Name>
+  <Value className="java.lang.Double">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">stringSimilarityBestLabel</Name>
+  <Value className="java.lang.Float">0.5</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">labelFreqInWp</Name>
+  <Value className="java.lang.Integer">13</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">airpSpecificClass</Name>
+  <Value className="java.lang.String"></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarity</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">parenthesesInfo</Name>
+  <Value className="java.lang.String">NONE</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">dbpInterestingClass</Name>
+  <Value className="java.lang.String"></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">uriFreqInWp</Name>
+  <Value className="java.lang.Integer">1</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarityLucene</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2SharedChild</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">wpPageId</Name>
+  <Value className="java.lang.Integer">0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">class</Name>
+  <Value className="java.lang.String">false</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2SharedParent</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">label</Name>
+  <Value className="java.lang.String">iag</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">redirInfo</Name>
+  <Value className="java.lang.String">disamb</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2BiDirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">airpInterestingClass</Name>
+  <Value className="java.lang.String"></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">disambInfo</Name>
+  <Value className="java.lang.String">nonredir</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">relLabelFreqByUriInWp</Name>
+  <Value className="java.lang.Double">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2UniIndirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">allOrigLabels</Name>
+  <Value className="java.lang.String">IAG</Value>
+</Feature>
+</Annotation>
+<Annotation Id="147" Type="Mention" StartNode="1086" EndNode="1089">
+<Feature>
+  <Name className="java.lang.String">entityId</Name>
+  <Value className="java.lang.String">E0772259</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">wikiUri</Name>
+  <Value className="java.lang.String">http://en.wikipedia.org/wiki/Insurance_Australia_Group</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">majorType</Name>
+  <Value className="java.lang.String">entities</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">docId</Name>
+  <Value className="java.lang.String">AFP_ENG_20070429.0321.LDC2009T13</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">type</Name>
+  <Value className="java.lang.String">Organization</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://dbpedia.org/resource/Insurance_Australia_Group</Value>
+</Feature>
+</Annotation>
+</AnnotationSet>
+
+</GateDocument>

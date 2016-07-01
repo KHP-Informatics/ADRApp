@@ -1,0 +1,36 @@
+Phase: ADRInNegTest1
+Input: Lookup Token Split
+Options: control = appelt
+
+Rule: ADRInbefore
+
+(
+  {Lookup.majorType == "ADRIn"}
+  ({Token})?
+  ({Lookup.majorType == "ADR"}):ADR
+
+)
+-->
+:ADR{
+  AnnotationSet set= bindings.get("ADR");
+  for (Annotation ann : set){
+   ann.getFeatures().remove("ignoreMe");
+   ann.getFeatures().put("Unnegated", "ADRIn");
+  }
+}
+
+Rule: ADRIgnore
+
+(
+  {Lookup.majorType == "ADRIn"}
+  ({Lookup.majorType == "negbefore"})
+  ({Lookup.majorType == "ADR"}):ADR
+
+)
+-->
+:ADR{
+  AnnotationSet set= bindings.get("ADR");
+  for (Annotation ann : set){
+   ann.getFeatures().put("KeepNeg", "ADRIn");
+  }
+}

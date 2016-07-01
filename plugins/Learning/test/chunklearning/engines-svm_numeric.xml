@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<ML-CONFIG>
+  <VERBOSITY level="0"/>
+  <FILTERING ratio="0.1" dis="far"/>
+ <SURROUND value="true"/>
+
+<PARAMETER name="thresholdProbabilityEntity" value="0.3"/>
+<PARAMETER name="thresholdProbabilityBoundary" value="0.50"/>
+<PARAMETER name="thresholdProbabilityClassification" value="0.5"/>
+
+<multiClassification2Binary method="one-vs-others"/>
+<!-- To test with a thread pool, comment out the line above and uncomment the
+next one.
+<multiClassification2Binary method="one-vs-others" thread-pool-size="4"/>
+-->
+
+<!-- Evaluation : how to split the corpus into test and learn? -->
+<EVALUATION method="split" runs="1" ratio="0.66"/>
+
+  <ENGINE nickname="SVM" implementationName="SVMLibSvmJava" 
+options=" -c 0.7 -t 0 -m 100 -tau 0.6  "/>
+
+
+<DATASET>
+		<INSTANCE-TYPE>Mention_disamb</INSTANCE-TYPE>
+
+
+		<ATTRIBUTE>
+			<NAME>allLabels</NAME>
+			<SEMTYPE>NOMINAL</SEMTYPE>
+			<TYPE>Mention_disamb</TYPE>
+			<FEATURE>allLabels</FEATURE>
+			<POSITION>0</POSITION>
+		</ATTRIBUTE>
+                <ATTRIBUTE>
+			<NAME>contextualSimilarity</NAME>
+			<SEMTYPE>NUMERIC</SEMTYPE>
+			<TYPE>Mention_disamb</TYPE>
+			<FEATURE>contextualSimilarity</FEATURE>
+			<POSITION>0</POSITION>
+		</ATTRIBUTE>
+
+                <ATTRIBUTE>
+			<NAME>contextualSimilarityRank</NAME>
+			<SEMTYPE>NUMERIC</SEMTYPE>
+			<TYPE>Mention_disamb</TYPE>
+			<FEATURE>contextualSimilarityRank</FEATURE>
+			<POSITION>0</POSITION>
+		</ATTRIBUTE>
+
+                <ATTRIBUTE>
+			<NAME>stringSimilarityBestLabel</NAME>
+			<SEMTYPE>NUMERIC</SEMTYPE>
+			<TYPE>Mention_disamb</TYPE>
+			<FEATURE>stringSimilarityBestLabel</FEATURE>
+			<POSITION>0</POSITION>
+		</ATTRIBUTE>
+	
+		<ATTRIBUTE>
+			<NAME>Class</NAME>
+			<SEMTYPE>NOMINAL</SEMTYPE>
+			<TYPE>Mention_disamb</TYPE>
+			<FEATURE>class</FEATURE>
+			<POSITION>0</POSITION>
+			<CLASS/>
+		</ATTRIBUTE>
+	</DATASET>
+
+</ML-CONFIG>
+

@@ -1,0 +1,22 @@
+Phase: dyscopy
+Input: Lookup
+Options: control = appelt
+
+Rule: dys
+(
+  {Lookup.majorType == "ADR"}
+):dyslook
+-->
+:dyslook {
+  AnnotationSet set = bindings.get("dyslook");
+  for (Annotation ann : set){
+    if(!ann.getFeatures().containsKey("ignoreMe")){
+      FeatureMap f = Factory.newFeatureMap();
+      f.put("JAPERule","No");
+      f.put("Type",ann.getFeatures().get("minorType"));
+      outputAS.add(ann.getStartNode(), ann.getEndNode(), "ADR",f);
+    }
+  }
+  
+}
+

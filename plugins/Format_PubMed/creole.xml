@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!-- $Id: creole.xml 7451 2006-06-15 14:10:50Z ian_roberts $ -->
+<!-- creole.xml directory file -->
+<CREOLE-DIRECTORY>
+  <JAR SCAN="true">format-pubmed.jar</JAR>  
+</CREOLE-DIRECTORY>

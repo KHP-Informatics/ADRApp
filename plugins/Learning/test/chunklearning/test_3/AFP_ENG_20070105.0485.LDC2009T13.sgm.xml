@@ -1,0 +1,544 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<GateDocument version="3">
+<!-- The document's features-->
+
+<GateDocumentFeatures>
+<Feature>
+  <Name className="java.lang.String">MatchesAnnots</Name>
+  <Value className="gate.corpora.ObjectWrapper"><![CDATA[<?xml version='1.0' encoding='UTF-8'?><gate.corpora.ObjectWrapper><value class="map"><entry><null/><list/></entry></value></gate.corpora.ObjectWrapper>]]></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">deleteNonNNPLookups</Name>
+  <Value className="java.lang.String">true</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">gate.SourceURL</Name>
+  <Value className="java.lang.String">file:/home/niraj/trendminer-sources/Data20092010/AFP_ENG_20070105.0485.LDC2009T13.sgm</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">lang</Name>
+  <Value className="java.lang.String">en</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">MimeType</Name>
+  <Value className="java.lang.String">text/sgml</Value>
+</Feature>
+</GateDocumentFeatures>
+<!-- The document content area with serialized nodes -->
+
+<TextWithNodes>
+ AFP_ENG_20070105.0485.LDC2009T13 
+ NEWS STORY 
+ 2007-01-05 
+
+
+AFP 2007 news calendar
+
+
+
+Here is a list of major events scheduled to take place throughout
+2007.
+
+
+-- JANUARY --
+
+
+7 - ALGERIA: 50th anniversary of the battle of Algiers, key clash
+in Algerian war for independence from France
+
+
+7 to 21 - DETROIT: International car show
+
+
+7 to 11: LAS VEGAS, Nevada: Electronics show
+
+
+9 - TOKYO: Japan's Defense Agency becomes Defense Ministry for
+first time since World War II
+
+
+10 - THE HAGUE: Trial starts at war crimes tribunal of Dragomir
+Milosevic, former Bosnian Serb commander during the siege of
+Sarajevo
+
+
+11 - ADDIS ABABA:Sentence expected in the trial of former
+dictator Mengistu Haile Mariam, found guilty of genocide
+
+
+11 - GUANTANAMO BAY, Cuba: Fifth anniversary of arrival of first
+prisoners at US detention camp
+
+
+13 to 14 - PARIS: France's ruling UMP party to appoint its
+contender for April presidential election
+
+
+14 - UNITED STATES: 50 years since death of US actor Humphrey
+Bogart
+
+
+15 - BEVERLY HILLS, California: Golden Globe film awards
+
+
+15 to 20 - MILAN, Italy: Men's fashion shows, autumn and winter
+collections
+
+
+20 to 25 - NAIROBI: World social forum
+
+
+21 - BELGRADE: Legislative elections in Serbia
+
+
+21 to 25 - CANNES, France: MIDEM world music industry fair
+
+
+22 - DHAKA: Bangladesh goes to the polls in national elections
+
+
+24 to 28 - DAVOS, Switzerland: World economic forum
+
+
+25 - UNITED STATES: 60 years since death of mob leader Al Capone
+
+
+25 to 28 - ANGOULEME, France: International comic strip fair
+
+
+27 to Feb 2 - PARIS: UN experts on climate change meet
+
+
+27 - OSLO: A year of festivities is launched marking the 100th
+anniversary of the death of Norwegian composer Edvard Grieg
+
+
+31 - PARIS: 30 years since inauguration of Pompidou Centre modern
+arts institution
+
+
+-- FEBRUARY --
+
+
+1 - FRANCE: Smoking ban comes into force in public places
+
+
+1 - LEBANON: Italy takes over command of UN interim peacekeeping
+force from France
+
+
+2 - NEW YORK: Fashion week starts
+
+
+2 and 3 - PARIS: International environment conference
+
+
+5 and 6 - PARIS: International UNICEF conference on child
+soldiers
+
+
+8 to 18 - BERLIN: Berlin film festival
+
+
+9 to 12 - MADRID: International fashion show
+
+
+11 - LOS ANGELES: Grammy music awards
+
+
+17 to 25 - MILAN, Italy: Women's ready-to-wear fashion show,
+autumn/winter 2007-2008 collections
+
+
+18 - CHINA: Chinese New Year -- start of the year of the pig
+
+
+26 to Mar 5 - PARIS: Women's ready-to-wear fashion show,
+autumn/winter 2007-2008 collections
+
+
+25 - LOS ANGELES: "Oscars" film awards
+
+
+-- MARCH --
+
+
+8 - WORLD: International women's day
+
+
+8 to 18 - GENEVA: Motor show
+
+
+15 to 21: <Node id="2651"/>HANOVER<Node id="2658"/>, Germany<Node id="2667"/>: World's biggest technology fair,
+CeBit
+
+
+22 - WORLD: World water day
+
+
+25 - EUROPE: 50 years since Treaty of Rome set up the European
+Economic Community, ancestor to the European Union
+
+
+23 to 27 - PARIS: Book fair, with special focus on India
+
+
+30 to Apr 2 - MONACO: Environment-friendly motor and renewable
+fuels fair
+
+
+-- APRIL --
+
+
+2 to 14 - 25th anniversary of Falkland Islands war between
+Britain and Argentina
+
+
+22 - FRANCE: First round of presidential election
+
+
+26 - SPAIN: 70th anniversary of the destruction of the Basque
+town of Guernica in northern Spain, by German bombers during the
+Spanish Civil War
+
+
+-- MAY --
+
+
+6 - FRANCE: Second round of presidential election
+
+
+9 - EUROPE - Europe day, commemorating key early step towards
+creating EU
+
+
+12 - HELSINKI: Eurovision song contest
+
+
+16 to 27 - CANNES, France: International film festival
+
+
+24 - BERLIN: G8 industrialised nations hold forum on partnership
+with Africa
+
+
+31 to June 1 - PARIS: Organisation for Economic Cooperation and
+Development
+
+
+(OECD) holds world forum
+
+
+31 - WORLD: World no-smoking day
+
+
+-- JUNE --
+
+
+2 to 6 - CAPE TOWN: World newspapers congress
+
+
+5 - TROMSOE, Norway: World environment day
+
+
+6 - MIDDLE EAST: 25th anniversary of Israeli invasion of Lebanon
+
+
+6 to 8 - HEILIGENDAMM, Germany: G8 summit
+
+
+10 and 17 - FRANCE: Legislative elections
+
+
+10 to Nov 21 - VENICE: Venice Biennale of art
+
+
+17 - ASSISI, Italy: Pope Benedict XVI presides over ceremonies
+for 800th anniversary of conversion of Saint Francis of Assisi
+
+
+-- JULY --
+
+
+1 - BRUSSELS: Portugal takes over rotating EU presidency
+
+
+23 to Aug 31 - SALZBURG, Austria: Music festival
+
+
+25 to Aug 2 - BAYREUTH, Germany: Wagner opera festival
+
+
+27 to Aug 8 - HYLANDS PARK, Britain: World scout jamboree marks
+100th anniversary of founding of the scout movement
+
+
+-- AUGUST --
+
+
+31 - 10th anniversary of death of Britain's Princess Diana in a
+car crash in Paris
+
+
+-- SEPTEMBER --
+
+
+Pope Benedict XV to visit Czech Republic and Austria
+
+
+5 - 10th anniversary of death of Mother Teresa
+
+
+16 - WORLD: World ozone protection day
+
+
+-- OCTOBER --
+
+
+EUROPE: 10 countries that joined EU in 2004 to become part of
+Schengen visa-free travel zone
+
+
+4 - 50th anniversary of launch of Sputnik, first artificial
+satellite
+
+
+8 - 40th anniversary of death of revolutionary Che Guevara
+
+
+8 to 12 - CANNES, France: MIPCOM, world's largest audiovisual
+content fair
+
+
+10 to 14 - FRANKFURT: International book fair
+
+
+18 to 22 - PARIS: FIAC international contemporary art fair
+
+
+-- NOVEMBER --
+
+
+6 - RUSSIA: 90th anniversary of Russian revolution
+
+
+14 - World diabetes day
+
+
+20 - World day for rights of the child
+
+
+-- DECEMBER --
+
+
+1 - World AIDS day
+
+
+3 to 14 - BALI, Indonesia: UN ministers' climate conference
+
+
+3 - 40 years since first heart transplant
+
+
+10 - Human rights day
+
+
+
+</TextWithNodes>
+<!-- The default annotation set -->
+
+<AnnotationSet>
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="anniePerSet">
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="Key">
+<Annotation Id="372" Type="Mention" StartNode="2651" EndNode="2658">
+<Feature>
+  <Name className="java.lang.String">entityId</Name>
+  <Value className="java.lang.String">E0589295</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">wikiUri</Name>
+  <Value className="java.lang.String">http://en.wikipedia.org/wiki/Hanover</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">majorType</Name>
+  <Value className="java.lang.String">entities</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">docId</Name>
+  <Value className="java.lang.String">AFP_ENG_20070105.0485.LDC2009T13</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">type</Name>
+  <Value className="java.lang.String">Location</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://dbpedia.org/resource/Hanover</Value>
+</Feature>
+</Annotation>
+<Annotation Id="15356" Type="Mention_disamb" StartNode="2651" EndNode="2667">
+<Feature>
+  <Name className="java.lang.String">structSimV2UniDirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2Combined</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">relUriFreqByLabelInWp</Name>
+  <Value className="java.lang.Double">0.9571428571428572</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">annieOverlapMatch</Name>
+  <Value className="java.lang.String">match</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">allLabels</Name>
+  <Value className="java.lang.String">hannover, germany|hannovre|hannover unrra displaced persons camp|hanover, germany|hannoveraner|hanover|hannover's museums|un/locode:dehaj|hannover</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">origLabels</Name>
+  <Value className="java.lang.String">Hanover, Germany</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://dbpedia.org/resource/Hanover</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">labelUriFreqInWp</Name>
+  <Value className="java.lang.Integer">67</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2BiIndirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">sources</Name>
+  <Value className="java.lang.String">label|yagoLabel</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">dbpSpecificClass</Name>
+  <Value className="java.lang.String">http://dbpedia.org/ontology/Settlement</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarityVector</Name>
+  <Value className="java.lang.Double">0.021098668665730094</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">stringSimilarityBestLabel</Name>
+  <Value className="java.lang.Float">0.5</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">labelFreqInWp</Name>
+  <Value className="java.lang.Integer">70</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">airpSpecificClass</Name>
+  <Value className="java.lang.String">http://dbpedia.org/ontology/City</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarity</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">parenthesesInfo</Name>
+  <Value className="java.lang.String">NONE</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">dbpInterestingClass</Name>
+  <Value className="java.lang.String">http://dbpedia.org/ontology/PopulatedPlace</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">uriFreqInWp</Name>
+  <Value className="java.lang.Integer">3500</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarityLucene</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2SharedChild</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">wpPageId</Name>
+  <Value className="java.lang.Integer">14197</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">class</Name>
+  <Value className="java.lang.String">true</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2SharedParent</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">label</Name>
+  <Value className="java.lang.String">hanover, germany</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">redirInfo</Name>
+  <Value className="java.lang.String">nodisamb|yago</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2BiDirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">airpInterestingClass</Name>
+  <Value className="java.lang.String">http://dbpedia.org/ontology/PopulatedPlace</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">disambInfo</Name>
+  <Value className="java.lang.String">redir|yago</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">relLabelFreqByUriInWp</Name>
+  <Value className="java.lang.Double">0.019142857142857142</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2UniIndirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">allOrigLabels</Name>
+  <Value className="java.lang.String">Hannover, Germany|Hannovre|Hannover UNRRA displaced persons camp|Hanover, Germany|Hannoveraner|Hanover|Hannover's Museums|UN/LOCODE:DEHAJ|Hannover</Value>
+</Feature>
+</Annotation>
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="GazetteerEN">
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="Mallet Output">
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="DEBUG_filterLookupsByPOS">
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="DEBUG_removeLookups">
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="Original markups">
+</AnnotationSet>
+
+</GateDocument>

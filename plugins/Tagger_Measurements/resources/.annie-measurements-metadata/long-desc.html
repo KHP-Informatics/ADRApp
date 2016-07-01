@@ -1,0 +1,62 @@
+<p><img src="ann-job-annie-measurements.png" style="float: right"/><strong>ANNIE</strong>
+is a named entity recognition pipeline that identifies basic entity types, such
+as <em>Person</em>, <em>Location</em>, <em>Organization</em>, <em>Money</em>
+amounts, <em>Time</em> and <em>Date</em> expressions.</p>
+
+<p>This pipeline combines the basic ANNIE named entity system with taggers to
+recognise numeric expressions (digits and words) and to annotate and normalise
+measurement expressions with features giving their value in SI units.</p>
+
+<table>
+  <tr>
+    <td colspan="2"><b>Default annotations</b></td>
+  </tr>
+  <tr>
+    <td><tt>:Person</tt></td>
+    <td rowspan="4">Standard named entity types</td>
+  </tr>
+  <tr>
+    <td><tt>:Location</tt></td>
+  </tr>
+  <tr>
+    <td><tt>:Organization</tt></td>
+  </tr>
+  <tr>
+    <td><tt>:Date</tt></td>
+  </tr>
+  <tr>
+    <td><tt>:Address</tt></td>
+    <td>Includes email and IP addresses as well as street addresses</td>
+  </tr>
+  <tr>
+    <td><tt>:Measurement</tt></td>
+    <td>Measurement expressions, with features giving the value and unit of the measurement, both in the original form specified in the document and in a form normalized to SI units</td>
+  </tr>
+  <tr>
+    <td colspan="2"><b>Additional annotations available if selected</b></td>
+  </tr>
+  <tr>
+    <td><tt>:Money</tt></td>
+    <td>Monetary amounts</td>
+  </tr>
+  <tr>
+    <td><tt>:Percent</tt></td>
+    <td>Expressions representing percentages</td>
+  </tr>
+  <tr>
+    <td><tt>:Token</tt></td>
+    <td>The individual tokens of the text, with "category" feature for POS</td>
+  </tr>
+  <tr>
+    <td><tt>:SpaceToken</tt></td>
+    <td>The spaces between tokens</td>
+  </tr>
+  <tr>
+    <td><tt>:Sentence</tt></td>
+    <td>Sentences detected by the sentence splitter</td>
+  </tr>
+  <tr>
+    <td><tt>:Ratio</tt></td>
+    <td>Expressions denoting a ratio rather than a simple measurement, typically percentages but also expressions like "300 parts per million"</td>
+  </tr>
+</table>

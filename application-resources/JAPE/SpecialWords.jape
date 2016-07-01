@@ -1,0 +1,59 @@
+/*--Developed By Ehtesham Iqbal / Robbie Mallah ----*/ 
+/*--Email: Ehtesham.iqbal@kcl.ac.uk --------------------*/ 
+
+Phase: SpecialWords
+Input: Lookup SpaceToken Token Split
+Options: control = appelt
+
+Rule: negbefore
+(
+  {Token.string=="Dr"}
+  ({Token}|{SpaceToken})[0,5]
+  ({Lookup.majorType == "ADR"}):ADR1  
+
+):negbefore
+-->
+:negbefore
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			    
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","Dr");
+			} 
+			
+		}
+	}
+
+/*********************************************/
+Rule: negbefore
+(
+  {Token.string=="GP"}
+  ({Token}|{SpaceToken})[0,5]
+  ({Lookup.majorType == "ADR"}):ADR1  
+
+):negbefore
+-->
+:negbefore
+	{
+		
+		if (bindings.get("ADR1") != null && inputAS.get("ADR")!= null)
+		{
+			
+			
+			AnnotationSet patSet= gate.Utils.getContainedAnnotations(inputAS.get("ADR"),(gate.AnnotationSet)bindings.get("ADR1"));
+			for(Annotation annot : patSet) 
+			{   
+			    
+				annot.getFeatures().put("Negation","Negated");
+				annot.getFeatures().put("JAPERule","GP");
+			} 
+			
+		}
+	}

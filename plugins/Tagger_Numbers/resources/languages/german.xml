@@ -1,0 +1,53 @@
+<config>
+  <description>German</description>
+  <words>
+    <word value="2.0">zwei</word>
+    <word value="60.0">sechzig</word>
+    <word value="40.0">vierzig</word>
+    <word value="1.0">ein</word>
+    <word value="19.0">neunzehn</word>
+    <word value="15.0">fünfzehn</word>
+    <word value="70.0">siebzig</word>
+    <word value="14.0">vierzehn</word>
+    <word value="17.0">siebzehn</word>
+    <word value="18.0">achtzehn</word>
+    <word value="12.0">zwolf</word>
+    <word value="30.0">dreissig</word>
+    <word value="5.0">funf</word>
+    <word value="20.0">zwanzig</word>
+    <word value="30.0">dreißig</word>
+    <word value="0.0">null</word>
+    <word value="11.0">elf</word>
+    <word value="16.0">sechzehn</word>
+    <word value="9.0">neun</word>
+    <word value="8.0">acht</word>
+    <word value="3.0">drei</word>
+    <word value="80.0">achtzig</word>
+    <word value="13.0">dreizehn</word>
+    <word value="1.0">eins</word>
+    <word value="10.0">zehn</word>
+    <word value="15.0">funfzehn</word>
+    <word value="90.0">neunzig</word>
+    <word value="50.0">funfzig</word>
+    <word value="50.0">fünfzig</word>
+    <word value="5.0">fünf</word>
+    <word value="12.0">zwölf</word>
+    <word value="7.0">sieben</word>
+    <word value="6.0">sechs</word>
+    <word value="4.0">vier</word>
+  </words>
+  <multipliers>
+    <word value="15.0">billiarde</word>
+    <word value="6.0">million</word>
+    <word value="18.0">trillion</word>
+    <word value="4.0">zehntausend</word>
+    <word value="3.0">tausend</word>
+    <word value="2.0">hundert</word>
+    <word value="6.0">hunderttausend</word>
+    <word value="12.0">billion</word>
+    <word value="9.0">milliarde</word>
+  </multipliers>
+  <conjunctions>
+    <word whole="false">und</word>
+  </conjunctions>
+</config>

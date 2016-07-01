@@ -1,0 +1,93 @@
+/*
+ * Copyright (c) 2011, The University of Sheffield.
+ * 
+ * This file is part of GATE (see http://gate.ac.uk/), and is free software,
+ * licenced under the GNU Library General Public License, Version 3, June 2007
+ * (in the distribution as file licence.html, and also available at
+ * http://gate.ac.uk/gate/licence.html).
+ */
+ 
+Imports: {
+  import static gate.creole.numbers.AnnotationConstants.HINT_FEATURE_NAME;
+  import static gate.creole.numbers.AnnotationConstants.NUMBER_ANNOTATION_NAME;
+  import static gate.creole.numbers.AnnotationConstants.TYPE_FEATURE_NAME;
+  import static gate.creole.numbers.AnnotationConstants.VALUE_FEATURE_NAME;
+}
+
+Phase: Numbers
+
+Input: Token Number Split
+Options: control = appelt
+
+Rule: Ranges
+(
+  ({Number.type == "numbers"}):n1
+  ({Number@string =~ "^-", Number.hint != "sup"}):n2
+)
+-->
+{
+  Annotation num = bindings.get("n2").iterator().next();
+
+  FeatureMap features = num.getFeatures();
+
+  features.put(VALUE_FEATURE_NAME, ((Double)features.get(VALUE_FEATURE_NAME))*-1d);
+	
+  try {
+    outputAS.add(num.getStartNode().getOffset()+1, num.getEndNode().getOffset(), NUMBER_ANNOTATION_NAME, features);
+  } catch(InvalidOffsetException ioe){
+    throw new LuckyException(ioe);
+  }
+
+  inputAS.remove(num);
+}
+
+Rule: Fraction1
+(
+  ({Number.type == "numbers", Number.hint == "sup"}):n1
+  {Token.string == "/"}
+  ({Number.type == "numbers", Number.hint == "sup"}):n2
+)
+-->
+{
+  Annotation n1 = bindings.get("n1").iterator().next();
+  Annotation n2 = bindings.get("n2").iterator().next();
+
+  FeatureMap features = Factory.newFeatureMap();
+  features.put(TYPE_FEATURE_NAME,"numbers");
+  features.put(VALUE_FEATURE_NAME, (Double)n1.getFeatures().get(VALUE_FEATURE_NAME)/(Double)n2.getFeatures().get(VALUE_FEATURE_NAME));
+  features.put(HINT_FEATURE_NAME, "sup");
+
+  try {
+    outputAS.add(n1.getStartNode().getOffset(), n2.getEndNode().getOffset(), NUMBER_ANNOTATION_NAME, features);
+  } catch(InvalidOffsetException ioe){
+    throw new LuckyException(ioe);
+  }
+
+  inputAS.remove(n1);
+  inputAS.remove(n2);
+}
+
+Rule: Fraction2
+(
+  ({Number.type == "numbers", Number.hint != "sup"}):n1
+  {Token.string == "/"}
+  ({Number.type == "numbers", Number.hint != "sup"}):n2
+)
+-->
+{
+  Annotation n1 = bindings.get("n1").iterator().next();
+  Annotation n2 = bindings.get("n2").iterator().next();
+
+  FeatureMap features = Factory.newFeatureMap();
+  features.put(TYPE_FEATURE_NAME,"numbers");
+  features.put(VALUE_FEATURE_NAME, (Double)n1.getFeatures().get(VALUE_FEATURE_NAME)/(Double)n2.getFeatures().get(VALUE_FEATURE_NAME));
+  
+  try {
+    outputAS.add(n1.getStartNode().getOffset(), n2.getEndNode().getOffset(), NUMBER_ANNOTATION_NAME, features);
+  } catch(InvalidOffsetException ioe){
+    throw new LuckyException(ioe);
+  }
+
+  inputAS.remove(n1);
+  inputAS.remove(n2);
+}

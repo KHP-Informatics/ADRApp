@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!-- $Id$ -->
+<CREOLE-DIRECTORY>
+  <!-- Processing Resources -->
+  <CREOLE>    
+    <!-- creole.xml for the Learning PR -->
+    <RESOURCE>
+      <NAME>Batch Learning PR</NAME>
+      <COMMENT>Supports training, application and evaluation of machine
+      learning models for NLP tasks</COMMENT>
+      <HELPURL>http://gate.ac.uk/userguide/chap:ml</HELPURL>
+      <CLASS>gate.learning.LearningAPIMain</CLASS>
+      <JAR>learningapi.jar</JAR>
+      <JAR>lib/weka.jar</JAR>
+
+      <PARAMETER NAME="configFileURL"
+        COMMENT="The URL for the configuration file" RUNTIME="false" SUFFIXES="xml"
+        OPTIONAL="false">java.net.URL</PARAMETER>
+
+      <PARAMETER NAME="corpus" COMMENT="Corpus to be processed"
+	      RUNTIME="true" OPTIONAL="false">gate.Corpus</PARAMETER>
+
+      <PARAMETER NAME="runProtocolDir" COMMENT="Directory to hold the run protocol files, no protocol files if not specified"
+	      RUNTIME="true" OPTIONAL="true">java.net.URL</PARAMETER>
+
+      <PARAMETER NAME="learningMode"
+        COMMENT="Train or classify the documents" RUNTIME="true" DEFAULT="TRAINING"
+        OPTIONAL="false">gate.learning.RunMode</PARAMETER>
+
+      <PARAMETER NAME="inputASName"
+        COMMENT="The name of the annotation set used for input" RUNTIME="true"
+        OPTIONAL="true">java.lang.String</PARAMETER>
+      <PARAMETER NAME="outputASName"
+        COMMENT="The name of the annotation set used for output" RUNTIME="true"
+        OPTIONAL="true">java.lang.String</PARAMETER>
+
+     </RESOURCE>
+     
+  </CREOLE>
+  
+  
+</CREOLE-DIRECTORY>

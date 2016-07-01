@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<GateDocument version="3">
+<!-- The document's features-->
+
+<GateDocumentFeatures>
+<Feature>
+  <Name className="java.lang.String">MatchesAnnots</Name>
+  <Value className="gate.corpora.ObjectWrapper"><![CDATA[<?xml version='1.0' encoding='UTF-8'?><gate.corpora.ObjectWrapper><value class="map"><entry><null/><list/></entry></value></gate.corpora.ObjectWrapper>]]></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">deleteNonNNPLookups</Name>
+  <Value className="java.lang.String">true</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">gate.SourceURL</Name>
+  <Value className="java.lang.String">file:/home/niraj/trendminer-sources/Data20092010/AFP_ENG_20070128.0038.LDC2009T13.sgm</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">lang</Name>
+  <Value className="java.lang.String">en</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">MimeType</Name>
+  <Value className="java.lang.String">text/sgml</Value>
+</Feature>
+</GateDocumentFeatures>
+<!-- The document content area with serialized nodes -->
+
+<TextWithNodes>
+ AFP_ENG_20070128.0038.LDC2009T13 
+ NEWS STORY 
+ 2007-01-28 
+
+
+Call for new hearing over slain Cambodian labour leader
+
+
+
+Cambodian rights groups Sunday demanded that the Court of Appeal
+open a new hearing to review the convictions of two men over the
+death of former union leader Chea Vichea.
+
+
+Chea Vichea, a vocal critic of Prime Minister Hun Sen, was gunned
+down at a Phnom Penh news stand three years ago in what many
+condemned as a political assassination.
+
+
+Two men, Born Samnag, 23, and Sok Sam Oeun, 36, were arrested
+just days after the daylight shooting and were each sentenced to
+20 years in prison after what Amnesty International called a
+"deeply flawed criminal investigation and trial".
+
+
+The Cambodian League for the Promotion and Defense of Human
+Rights (LICADHO) and the Cambodian Human Rights and Development
+Association (ADHOC) on Sunday demanded the court schedule a new
+hearing for the appeal filed by the two men.
+
+
+A hearing had been set for October 2006, but the proceeding was
+postponed after one of the three judges on the appeals panel
+failed to show up due to an illness.
+
+
+"We need justice," said LICADHO president Kek Galabru. "Every day
+longer that the two of them remain in prison imposes greater
+suffering and hardship on themselves and their families."
+
+
+"We are publicly counting the days that Born Samnang and Sok Sam
+Oeun are in prison, just like they must be counting every single
+day of their unjust imprisonment," she added.
+
+
+Thun Saray, who heads ADHOC, said their imprisonment was further
+damaging the already dim international reputation of Cambodia's
+justice system.
+
+
+"We urge the Court of Appeal to urgently set a new hearing as
+soon as possible and consider all the available evidence in this
+case," he told AFP.
+
+
+"We believe that an examination of all the facts will lead to the
+release of Born Samnang and Sok Sam Oeun."
+
+
+Sok Sam Oeun's father, Vuon Phon, called on authorities to
+conduct a more extensive investigation.
+
+
+"From day to day I have been waiting for my son... Today I demand
+real justice," he told AFP.
+
+
+Since the two were convicted of killing Chea Vichea, who had led
+the opposition- linked <Node id="2162"/>Free Trade Union<Node id="2178"/> of the Workers of Kingdom
+of Cambodia, one of the key witnesses in the trial has recanted.
+
+
+Former Phnom Penh police chief Heng Pov, who led the
+investigation, admitted in August the two did not kill Chea
+Vichea.
+
+
+
+</TextWithNodes>
+<!-- The default annotation set -->
+
+<AnnotationSet>
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="Key">
+<Annotation Id="3149" Type="Mention_disamb" StartNode="2162" EndNode="2178">
+<Feature>
+  <Name className="java.lang.String">structSimV2UniDirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">relUriFreqByLabelInWp</Name>
+  <Value className="java.lang.Double">1.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2Combined</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">annieOverlapMatch</Name>
+  <Value className="java.lang.String">mismatch</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">origLabels</Name>
+  <Value className="java.lang.String">Free Trade Union|Free trade union</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">allLabels</Name>
+  <Value className="java.lang.String">free trade union</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">labelUriFreqInWp</Name>
+  <Value className="java.lang.Integer">7</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://dbpedia.org/resource/Free_Trade_Union</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2BiIndirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">sources</Name>
+  <Value className="java.lang.String">label|yagoLabel</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarityVector</Name>
+  <Value className="java.lang.Double">0.005452628841119803</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">dbpSpecificClass</Name>
+  <Value className="java.lang.String"></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">stringSimilarityBestLabel</Name>
+  <Value className="java.lang.Float">0.5</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">labelFreqInWp</Name>
+  <Value className="java.lang.Integer">7</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">annieExactMatch</Name>
+  <Value className="java.lang.String">mismatch</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarity</Name>
+  <Value className="java.lang.Float">0.979</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">airpSpecificClass</Name>
+  <Value className="java.lang.String">http://dbpedia.org/ontology/Agent</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">parenthesesInfo</Name>
+  <Value className="java.lang.String">NONE</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">dbpInterestingClass</Name>
+  <Value className="java.lang.String"></Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">uriFreqInWp</Name>
+  <Value className="java.lang.Integer">8</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">contextualSimilarityLucene</Name>
+  <Value className="java.lang.Float">0.48861563</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2SharedChild</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">wpPageId</Name>
+  <Value className="java.lang.Integer">24207782</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">class</Name>
+  <Value className="java.lang.String">false</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2SharedParent</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">label</Name>
+  <Value className="java.lang.String">free trade union</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">redirInfo</Name>
+  <Value className="java.lang.String">nodisamb|yago</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2BiDirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">airpInterestingClass</Name>
+  <Value className="java.lang.String">http://www.w3.org/2002/07/owl#Thing</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">disambInfo</Name>
+  <Value className="java.lang.String">nonredir|yago</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">relLabelFreqByUriInWp</Name>
+  <Value className="java.lang.Double">0.875</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">structSimV2UniIndirect</Name>
+  <Value className="java.lang.Float">0.0</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">allOrigLabels</Name>
+  <Value className="java.lang.String">Free Trade Union|Free trade union</Value>
+</Feature>
+</Annotation>
+<Annotation Id="44" Type="Mention" StartNode="2162" EndNode="2178">
+<Feature>
+  <Name className="java.lang.String">entityId</Name>
+  <Value className="java.lang.String">E0468402</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">wikiUri</Name>
+  <Value className="java.lang.String">http://en.wikipedia.org/wiki/Free_Trade_Union_of_Workers_of_the_Kingdom_of_Cambodia</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">majorType</Name>
+  <Value className="java.lang.String">entities</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">docId</Name>
+  <Value className="java.lang.String">AFP_ENG_20070128.0038.LDC2009T13</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">type</Name>
+  <Value className="java.lang.String">Organization</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://dbpedia.org/resource/Free_Trade_Union_of_Workers_of_the_Kingdom_of_Cambodia</Value>
+</Feature>
+</Annotation>
+</AnnotationSet>
+
+</GateDocument>

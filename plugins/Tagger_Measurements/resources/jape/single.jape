@@ -1,0 +1,180 @@
+/*
+ * Copyright (c) 2009-2011, The University of Sheffield.
+ * 
+ * This file is part of GATE (see http://gate.ac.uk/), and is free software,
+ * Licensed under the GNU Library General Public License, Version 3, June 2007
+ * (in the distribution as file licence.html, and also available at
+ * http://gate.ac.uk/gate/licence.html).
+ */
+ 
+Imports: {
+import gate.creole.measurements.*;
+}
+
+Phase: Single
+
+Input: Number Token Measurement CannotBeAMeasurement PossibleMeasurement
+Options: control = appelt
+
+Rule:Ignore
+Priority: 1000
+(
+	{CannotBeAMeasurement}
+)
+-->
+{}
+
+Rule: SkipMeasurements
+Priority: 1000
+/*
+ * If we have already annotated something as a measurement that we probably
+ * don't need to do so a second time
+ */
+(
+	{Measurement}
+)
+-->
+{}
+
+Rule: PlusMinusIntervals
+Priority: 500
+(
+	({Number}):number1
+	{Token.string == "±"}
+	({PossibleMeasurement}):number2
+)
+-->
+{
+  Annotation possible = bindings.get("number2").iterator().next();
+  
+  Annotation number1 = bindings.get("number1").iterator().next();
+  Annotation number2 = (Annotation)possible.getFeatures().get("number");
+    
+  try {
+    
+    Double startNumber = (Double)number1.getFeatures().get("value") - (Double)number2.getFeatures().get("value");
+    Double endNumber = (Double)number1.getFeatures().get("value") + (Double)number2.getFeatures().get("value");
+    
+    MeasurementsParser parser = (MeasurementsParser)getActionContext().getPRFeatures().get("measurementsParser");
+    boolean consumeNumberAnnotations = (Boolean)getActionContext().getPRFeatures().get("consumeNumberAnnotations");
+    
+    Measurement startValue = parser.parse(startNumber,(String)possible.getFeatures().get("unit"));
+    
+    if (startValue == null) return;
+    
+    Measurement endValue = parser.parse(endNumber,(String)possible.getFeatures().get("unit"));
+    
+    if (endValue == null) return;
+    
+    FeatureMap features = Factory.newFeatureMap();
+    features.put("type","interval");
+    features.put("rule","plusMinusIntervals");
+
+    features.put("normalizedUnit", startValue.getNormalizedUnit());
+
+    //TODO this assumes that the first measurement is less than the second
+    features.put("normalizedMinValue",startValue.getNormalizedValue());
+    features.put("normalizedMaxValue",endValue.getNormalizedValue());
+    
+    String dimension = startValue.getDimension();
+    if (dimension != null) features.put("dimension",dimension);
+
+    outputAS.add(number1.getStartNode().getOffset(),number2.getEndNode().getOffset()+endValue.getParsedText().length(),"Measurement", features);
+	
+	if (consumeNumberAnnotations) {
+	  inputAS.remove(number1);
+	  inputAS.remove(number2);
+	}
+  }
+  catch (Exception e) {
+   throw new NonFatalJapeException(e);
+  }
+}
+
+Rule: Temperatures
+(
+   ({Number}):number
+   ({Token.string == "°"}|{Token.string == "degrees"})
+   ({Token.string =~ "[CFK]"}):unit
+)
+-->
+{
+   Annotation number = ((AnnotationSet)bindings.get("number")).iterator().next();
+   Annotation unit = ((AnnotationSet)bindings.get("unit")).iterator().next();
+
+   String unitText = "°"+unit.getFeatures().get("string");
+
+   try {
+      MeasurementsParser parser = (MeasurementsParser)getActionContext().getPRFeatures().get("measurementsParser");
+      boolean consumeNumberAnnotations = (Boolean)getActionContext().getPRFeatures().get("consumeNumberAnnotations");
+      
+      Measurement value = parser.parse((Double)number.getFeatures().get("value"),unitText);
+
+      if (value == null) return;
+
+      FeatureMap features = Factory.newFeatureMap();
+      features.put("type","scalar");
+      features.put("value", value.getValue());
+      features.put("rule", "temperatures");
+
+      features.put("unit", unitText);
+      features.put("normalized", value.toString());
+
+      features.put("normalizedUnit", value.getNormalizedUnit());
+      features.put("normalizedValue", value.getNormalizedValue());
+
+      String dimension = value.getDimension();
+      if (dimension != null) features.put("dimension",dimension);
+
+      outputAS.add(number.getStartNode().getOffset(),unit.getEndNode().getOffset(),"Measurement", features);
+      
+      if (consumeNumberAnnotations) inputAS.remove(number);
+   }
+   catch (Exception e) {
+     throw new NonFatalJapeException(e);
+   }
+}
+
+Rule: Measurement
+(
+  {PossibleMeasurement}
+):number
+-->
+{
+  Annotation possible = bindings.get("number").iterator().next();
+  
+  Annotation number = (Annotation)possible.getFeatures().get("number");
+
+  try {
+    
+    String content = (String)possible.getFeatures().get("unit");
+
+	MeasurementsParser parser = (MeasurementsParser)getActionContext().getPRFeatures().get("measurementsParser");
+	boolean consumeNumberAnnotations = (Boolean)getActionContext().getPRFeatures().get("consumeNumberAnnotations");
+
+    Measurement value = parser.parse((Double)number.getFeatures().get("value"),content,0);
+
+    if (value == null) return;
+
+    FeatureMap features = Factory.newFeatureMap();
+    features.put("type","scalar");
+    features.put("rule","measurement");
+    features.put("value", value.getValue());    
+    features.put("unit", value.getUnit());
+    features.put("normalized", value.toString());
+    features.put("normalizedUnit", value.getNormalizedUnit());
+    features.put("normalizedValue", value.getNormalizedValue());
+
+    String dimension = value.getDimension();
+    if (dimension != null) features.put("dimension",dimension);
+
+    outputAS.add(number.getStartNode().getOffset(),number.getEndNode().getOffset()+value.getParsedText().length(),"Measurement", features);
+    
+    if (consumeNumberAnnotations) inputAS.remove(number);
+  }
+  catch (Exception e) {
+    e.printStackTrace();
+    //throw new NonFatalJapeException(e);
+  }
+}
+

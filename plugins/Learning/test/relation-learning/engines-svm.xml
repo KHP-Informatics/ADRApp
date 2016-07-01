@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<ML-CONFIG>
+   <VERBOSITY level="0"/>
+   <SURROUND value="false"/>
+   <FILTERING ratio="0.0" dis="near"/>
+
+   <PARAMETER name="thresholdProbabilityEntity" value="0.2"/>
+   <PARAMETER name="thresholdProbabilityBoundary" value="0.42"/>
+   <PARAMETER name="thresholdProbabilityClassification" value="0.5"/>
+
+   <multiClassification2Binary method="one-vs-another"/>
+
+   <!-- Evaluation : how to split the corpus into test and learn? -->
+   <EVALUATION method="split" runs="1" ratio="0.66"/>
+
+   <ENGINE nickname="SVM" implementationName="SVMLibSvmJava" 
+         options=" -c 0.7 -t 0 -m 100 -tau 0.6"/>
+
+   <DATASET>
+     <INSTANCE-TYPE>RE_INS</INSTANCE-TYPE>
+     <INSTANCE-ARG1>arg1</INSTANCE-ARG1>
+     <INSTANCE-ARG2>arg2</INSTANCE-ARG2>
+
+     <FEATURES-ARG1>
+       <ARG>
+        <NAME>ARG1</NAME>
+        <SEMTYPE>NOMINAL</SEMTYPE>
+	<TYPE>ACEEntity</TYPE>
+	<FEATURE>MENTION_ID</FEATURE>
+       </ARG>
+       <ATTRIBUTE>
+         <NAME>Form</NAME>
+         <SEMTYPE>NOMINAL</SEMTYPE>
+         <TYPE>Token</TYPE>
+         <FEATURE>string</FEATURE>
+         <POSITION>0</POSITION>
+       </ATTRIBUTE>
+
+       <ATTRIBUTE>
+         <NAME>POS</NAME>
+         <SEMTYPE>NOMINAL</SEMTYPE>
+	 <TYPE>Token</TYPE>
+	 <FEATURE>category</FEATURE>
+         <POSITION>0</POSITION>
+       </ATTRIBUTE>
+       </FEATURES-ARG1>
+
+       <FEATURES-ARG2>
+        <ARG>
+          <NAME>ARG2</NAME>
+          <SEMTYPE>NOMINAL</SEMTYPE>
+	  <TYPE>ACEEntity</TYPE>
+	  <FEATURE>MENTION_ID</FEATURE>
+        </ARG>
+        <ATTRIBUTE>
+          <NAME>Form</NAME>
+          <SEMTYPE>NOMINAL</SEMTYPE>
+	  <TYPE>Token</TYPE>
+	  <FEATURE>string</FEATURE>
+          <POSITION>0</POSITION>
+        </ATTRIBUTE>
+
+        <ATTRIBUTE>
+          <NAME>POS</NAME>
+          <SEMTYPE>NOMINAL</SEMTYPE>
+	  <TYPE>Token</TYPE>
+	  <FEATURE>category</FEATURE>
+          <POSITION>0</POSITION>
+        </ATTRIBUTE>
+      </FEATURES-ARG2>
+    
+      <ATTRIBUTE_REL>
+         <NAME>EntityCom1</NAME>
+         <SEMTYPE>NOMINAL</SEMTYPE>
+         <TYPE>RE_INS</TYPE>
+         <ARG1>arg1</ARG1>
+         <ARG2>arg2</ARG2>
+         <FEATURE>t12</FEATURE>
+         <POSITION>0</POSITION>
+     </ATTRIBUTE_REL>
+
+     <ATTRIBUTE_REL>
+        <NAME>EntityCom2</NAME>
+        <SEMTYPE>NOMINAL</SEMTYPE>
+        <TYPE>RE_INS</TYPE>
+        <ARG1>arg1</ARG1>
+        <ARG2>arg2</ARG2>
+        <FEATURE>s12</FEATURE>
+        <POSITION>0</POSITION>
+    </ATTRIBUTE_REL>
+
+    <ATTRIBUTE_REL>
+      <NAME>Class</NAME>
+      <SEMTYPE>NOMINAL</SEMTYPE>
+      <TYPE>ACERelation</TYPE>
+      <ARG1>MENTION_ARG1</ARG1>
+      <ARG2>MENTION_ARG2</ARG2>
+      <FEATURE>Relation_type</FEATURE>
+      <POSITION>0</POSITION>
+      <CLASS/>
+    </ATTRIBUTE_REL>
+ </DATASET>
+
+</ML-CONFIG>
+

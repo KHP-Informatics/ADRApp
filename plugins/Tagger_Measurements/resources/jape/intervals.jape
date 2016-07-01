@@ -1,0 +1,96 @@
+/*
+ * Copyright (c) 2009-2011, The University of Sheffield.
+ * 
+ * This file is part of GATE (see http://gate.ac.uk/), and is free software,
+ * Licensed under the GNU Library General Public License, Version 3, June 2007
+ * (in the distribution as file licence.html, and also available at
+ * http://gate.ac.uk/gate/licence.html).
+ */
+ 
+Phase: Intervals
+
+Input: Token Measurement
+Options: control = appelt
+
+Rule:Interval1
+(
+  ({Measurement}):m1
+  ({Token.string == "to"}|{Token.string == "-"}|{Token.string == "~"})
+  ({Token.string == "about"})?
+  ({Measurement}):m2
+):interval
+-->
+{
+  try {
+    Annotation m1 = ((AnnotationSet)bindings.get("m1")).iterator().next();
+    Annotation m2 = ((AnnotationSet)bindings.get("m2")).iterator().next();
+
+    FeatureMap fm1 = m1.getFeatures();
+    FeatureMap fm2 = m2.getFeatures();
+
+    if (!fm1.get("normalizedUnit").equals(fm2.get("normalizedUnit"))) return;
+
+    FeatureMap features = Factory.newFeatureMap();
+    features.put("type","interval");
+    features.put("rule","interval1");
+
+    features.put("normalizedUnit", fm1.get("normalizedUnit"));
+
+	if ((Double)fm1.get("normalizedValue") > (Double)fm2.get("normalizedValue")) {
+		FeatureMap temp = fm1;
+		fm1 = fm2;
+		fm2 = temp;
+	}
+
+    features.put("normalizedMinValue",fm1.get("normalizedValue"));
+    features.put("normalizedMaxValue",fm2.get("normalizedValue"));
+    if (fm1.containsKey("dimension")) features.put("dimension", fm1.get("dimension"));
+
+	AnnotationSet interval = (AnnotationSet)bindings.get("interval");
+    outputAS.add(interval.firstNode().getOffset(),interval.lastNode().getOffset(),"Measurement", features);
+  }
+  catch (Exception e) {
+    throw new NonFatalJapeException(e);
+  }
+}
+
+Rule:Interval2
+(
+  {Token.string == "between"}
+  (({Measurement}):m1
+  {Token.string == "and"}
+  ({Measurement}):m2):interval
+)
+-->
+{
+  try {
+    Annotation m1 = ((AnnotationSet)bindings.get("m1")).iterator().next();
+    Annotation m2 = ((AnnotationSet)bindings.get("m2")).iterator().next();
+
+    FeatureMap fm1 = m1.getFeatures();
+    FeatureMap fm2 = m2.getFeatures();
+
+    if (!fm1.get("normalizedUnit").equals(fm2.get("normalizedUnit"))) return;
+
+    if ((Double)fm1.get("normalizedValue") > (Double)fm2.get("normalizedValue")) {
+		FeatureMap temp = fm1;
+		fm1 = fm2;
+		fm2 = temp;
+	}
+
+    FeatureMap features = Factory.newFeatureMap();
+    features.put("type","interval");
+    features.put("rule","interval2");
+
+    features.put("normalizedUnit", fm1.get("normalizedUnit"));
+    features.put("normalizedMinValue",fm1.get("normalizedValue"));
+    features.put("normalizedMaxValue",fm2.get("normalizedValue"));
+    if (fm1.containsKey("dimension")) features.put("dimension", fm1.get("dimension"));
+
+    AnnotationSet interval = (AnnotationSet)bindings.get("interval");
+    outputAS.add(interval.firstNode().getOffset(),interval.lastNode().getOffset(),"Measurement", features);
+  }
+  catch (Exception e) {
+    throw new NonFatalJapeException(e);
+  }
+}

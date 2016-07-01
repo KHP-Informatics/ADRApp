@@ -1,0 +1,97 @@
+/*
+ * Copyright (c) 2009-2011, The University of Sheffield.
+ * 
+ * This file is part of GATE (see http://gate.ac.uk/), and is free software,
+ * Licensed under the GNU Library General Public License, Version 3, June 2007
+ * (in the distribution as file licence.html, and also available at
+ * http://gate.ac.uk/gate/licence.html).
+ */
+ 
+Phase: Ratios
+
+Input: Number Token Measurement CannotBeAMeasurement
+Options: control = appelt
+
+Rule:Ignore
+Priority: 1000
+(
+	{CannotBeAMeasurement}
+)
+-->
+{}
+
+/*
+ * Assume that we won't find ratios inside already annotated measurements
+ */ 
+Rule: SkipMeasurements
+Priority: 500
+(
+	{Measurement}
+)
+-->
+{}
+
+
+Rule: Percent
+(
+	({Number}):number
+	({Token.string == "percent"}|{Token.string == "%"}|{Token.string == "pph"})
+):percent
+-->
+{
+  Annotation number = ((AnnotationSet)bindings.get("number")).iterator().next();
+  AnnotationSet percent = (AnnotationSet)bindings.get("percent");
+	
+  try {
+	boolean consumeNumberAnnotations = (Boolean)getActionContext().getPRFeatures().get("consumeNumberAnnotations");
+	
+	FeatureMap features = Factory.newFeatureMap();
+	features.put("rule","ratioPercent");
+	
+	features.put("numerator", number.getFeatures().get("value"));
+	features.put("denominator", 100D);
+	
+	Double value = ((Double)number.getFeatures().get("value"))/100D;
+	
+	features.put("value", value);
+    
+    outputAS.add(percent.firstNode().getOffset(),percent.lastNode().getOffset(),"Ratio", features);
+    
+    if (consumeNumberAnnotations) inputAS.remove(number);
+  }
+  catch (Exception e) {
+    throw new NonFatalJapeException(e);
+  }
+}
+
+Rule: PartsPerMillion
+(
+	({Number}):number
+	(({Token.string == "parts"}{Token.string == "per"}{Token.string == "million"})|{Token.string == "ppm"})
+):percent
+-->
+{
+  Annotation number = ((AnnotationSet)bindings.get("number")).iterator().next();
+  AnnotationSet percent = (AnnotationSet)bindings.get("percent");
+	
+  try {
+	boolean consumeNumberAnnotations = (Boolean)getActionContext().getPRFeatures().get("consumeNumberAnnotations");
+	
+	FeatureMap features = Factory.newFeatureMap();
+	features.put("rule","ratioPartsPerMillion");
+	
+	features.put("numerator", number.getFeatures().get("value"));
+	features.put("denominator", 1000000D);
+	
+	Double value = ((Double)number.getFeatures().get("value"))/1000000D;
+	
+	features.put("value", value);
+    
+    outputAS.add(percent.firstNode().getOffset(),percent.lastNode().getOffset(),"Ratio", features);
+    
+    if (consumeNumberAnnotations) inputAS.remove(number);
+  }
+  catch (Exception e) {
+    throw new NonFatalJapeException(e);
+  }
+}
